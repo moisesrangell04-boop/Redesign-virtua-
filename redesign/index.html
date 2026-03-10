@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtua Corretora de Seguros | Plano de Saúde, Seguro Auto e Mais</title>
+    <meta name="description"
+        content="Corretora de Seguros especializada em Planos de Saúde, Seguro Auto, Vida e Odontológico no Rio de Janeiro. Mais de 10.000 clientes atendidos. Solicite uma cotação gratuita!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "InsuranceAgency",
+        "name": "Virtua Corretora de Seguros",
+        "url": "https://www.virtuacorretora.com.br",
+        "logo": "https://www.virtuacorretora.com.br/wp-content/uploads/logo-virtua.png",
+        "description": "Corretora de Seguros e Planos de Saúde no Rio de Janeiro. Mais de 10.000 clientes atendidos.",
+        "telephone": ["+5522999404840", "+5522998811541"],
+        "email": "contato@virtuacorretora.com.br",
+        "address": [
+            {
+                "@type": "PostalAddress",
+                "streetAddress": "Av. das Américas, 3443 - Condomínio Américas Corporate, Bloco 3B, 2º Andar",
+                "addressLocality": "Rio de Janeiro",
+                "addressRegion": "RJ",
+                "addressCountry": "BR"
+            },
+            {
+                "@type": "PostalAddress",
+                "streetAddress": "Rua Barão da Lagoa Dourada, 237, sala 19",
+                "addressLocality": "Campos dos Goytacazes",
+                "addressRegion": "RJ",
+                "postalCode": "28035-211",
+                "addressCountry": "BR"
+            }
+        ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Quais tipos de planos de saúde empresariais estão disponíveis?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Oferecemos planos empresariais a partir de 2 vidas, com descontos de 30 a 40% em relação aos planos individuais. Opções para funcionários, familiares e categorias específicas."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quais operadoras de saúde vocês trabalham?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Trabalhamos com as principais operadoras: Amil, Bradesco Saúde, SulAmérica, Unimed, Intermédica, Porto Seguro, Assim Saúde e muitas outras."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Como funciona a cotação de seguro auto?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "É simples: enviamos os dados do motorista, veículo e local onde pernoita para as maiores seguradoras do Brasil. Encontramos o melhor custo-benefício com descontos de 10 a 40% na renovação."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "A Virtua Corretora é registrada na SUSEP?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sim, somos uma corretora registrada na SUSEP (Superintendência de Seguros Privados), garantindo total conformidade e segurança nas operações."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quanto tempo leva para ativar meu plano de saúde?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "O prazo varia por operadora, mas em geral a ativação ocorre em 24 a 48 horas após a aprovação cadastral. Carências podem se aplicar dependendo do tipo de plano."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-contact">
+                <a href="tel:+5522999404840" class="top-bar-link">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                    (22) 99940-4840
+                </a>
+                <a href="https://wa.me/5522999404840" target="_blank" class="top-bar-link whatsapp-link">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
+                    WhatsApp
+                </a>
+            </div>
+            <div class="top-bar-info">
+                <span>Seg-Sex: 9h às 18h</span>
+                <span class="separator">|</span>
+                <span>SUSEP Registrada</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <img src="https://www.virtuacorretora.com.br/wp-content/uploads/virtua-logo.png"
+                    alt="Virtua Corretora de Seguros" class="logo-img"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="logo-fallback" style="display:none">
+                    <span class="logo-icon">V</span>
+                    <span class="logo-text">virtua<small>CORRETORA DE SEGUROS</small></span>
+                </div>
+            </a>
+
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#produtos" class="nav-link">Produtos <svg width="12" height="12" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-grid">
+                                <a href="#" class="dropdown-item">
+                                    <span class="dropdown-icon">🏥</span>
+                                    <span>Plano de Saúde</span>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <span class="dropdown-icon">🦷</span>
+                                    <span>Plano Odontológico</span>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <span class="dropdown-icon">❤️</span>
+                                    <span>Seguro de Vida</span>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <span class="dropdown-icon">🚗</span>
+                                    <span>Seguro Auto</span>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <span class="dropdown-icon">✈️</span>
+                                    <span>Seguro Viagem</span>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <span class="dropdown-icon">🏠</span>
+                                    <span>Seguro Residencial</span>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <span class="dropdown-icon">🐾</span>
+                                    <span>Plano de Saúde Pet</span>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <span class="dropdown-icon">💰</span>
+                                    <span>Previdência Privada</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#quem-somos" class="nav-link">Quem Somos</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <a href="#contato" class="btn btn-primary header-cta">Fazer Simulação</a>
+
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="assets/img/hero-family.png" alt="" class="hero-bg-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">🛡️ Registrada na SUSEP</div>
+                <h1>Proteção sob medida<br>para <span class="gradient-text">você e sua família</span></h1>
+                <p class="hero-subtitle">Somos uma corretora de seguros completa. Comparamos as melhores operadoras do
+                    mercado para encontrar o plano ideal — com o melhor custo-benefício.</p>
+                <div class="hero-ctas">
+                    <a href="#contato" class="btn btn-primary btn-lg">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        Converse com um Corretor
+                    </a>
+                    <a href="#contato" class="btn btn-outline btn-lg">Fazer Simulação →</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-target="10000">0</span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-label">Clientes atendidos</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="20">0</span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-label">Operadoras parceiras</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="4">0</span>
+                        <span class="stat-label">.9 ★ no Google</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products - Personal -->
+    <section class="section products" id="produtos">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-tag">Produtos</span>
+                <h2 class="section-title">Soluções para <span class="gradient-text">Você e sua Família</span></h2>
+                <p class="section-desc">Encontre a proteção ideal para cada momento da sua vida</p>
+            </div>
+            <div class="products-grid" data-reveal>
+                <div class="product-card">
+                    <div class="product-icon">🏥</div>
+                    <h3>Plano de Saúde</h3>
+                    <p>Amil, Bradesco, SulAmérica, Unimed e mais. Planos regionais e nacionais.</p>
+                    <a href="#contato" class="product-link">Cotar agora →</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🦷</div>
+                    <h3>Plano Odontológico</h3>
+                    <p>Cobertura completa: consultas, limpeza, restaurações, canal e ortodontia.</p>
+                    <a href="#contato" class="product-link">Cotar agora →</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">❤️</div>
+                    <h3>Seguro de Vida</h3>
+                    <p>Individual ou em grupo. Coberturas para invalidez, doenças graves e mais.</p>
+                    <a href="#contato" class="product-link">Cotar agora →</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🚗</div>
+                    <h3>Seguro Auto</h3>
+                    <p>Cotamos nas maiores seguradoras. Descontos de 10 a 40% na renovação.</p>
+                    <a href="#contato" class="product-link">Cotar agora →</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">✈️</div>
+                    <h3>Seguro Viagem</h3>
+                    <p>Nacional e internacional. Proteção completa para sua viagem.</p>
+                    <a href="#contato" class="product-link">Cotar agora →</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🏠</div>
+                    <h3>Seguro Residencial</h3>
+                    <p>Proteção para sua casa: incêndio, roubo, danos elétricos e mais.</p>
+                    <a href="#contato" class="product-link">Cotar agora →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Section -->
+    <section class="section business" id="empresarial">
+        <div class="business-bg">
+            <img src="assets/img/dark-bg.png" alt="" class="business-bg-img">
+        </div>
+        <div class="container">
+            <div class="section-header light" data-reveal>
+                <span class="section-tag light">Empresas</span>
+                <h2 class="section-title light">Soluções para <span class="gradient-text-light">sua Empresa</span></h2>
+                <p class="section-desc light">Planos empresariais a partir de 2 vidas com descontos de até 40%</p>
+            </div>
+            <div class="business-grid" data-reveal>
+                <div class="business-card">
+                    <div class="business-icon">🏢</div>
+                    <h3>Saúde Empresarial</h3>
+                    <p>Planos de saúde para seus funcionários com as melhores condições do mercado.</p>
+                </div>
+                <div class="business-card">
+                    <div class="business-icon">🦷</div>
+                    <h3>Odonto Empresarial</h3>
+                    <p>Cobertura odontológica para toda a equipe a preços acessíveis.</p>
+                </div>
+                <div class="business-card">
+                    <div class="business-icon">👥</div>
+                    <h3>Vida em Grupo</h3>
+                    <p>Seguro de vida coletivo com benefícios exclusivos para empresas.</p>
+                </div>
+                <div class="business-card">
+                    <div class="business-icon">🚛</div>
+                    <h3>Seguro Frota</h3>
+                    <p>Proteja os veículos da sua empresa com condições especiais.</p>
+                </div>
+                <div class="business-card">
+                    <div class="business-icon">📋</div>
+                    <h3>Seguro Garantia</h3>
+                    <p>Garantias contratuais para licitações e obras com agilidade.</p>
+                </div>
+                <div class="business-card">
+                    <div class="business-icon">🎓</div>
+                    <h3>Seguro Estágio</h3>
+                    <p>Proteção obrigatória para estagiários conforme a lei do estágio.</p>
+                </div>
+            </div>
+            <div class="text-center" data-reveal>
+                <a href="#contato" class="btn btn-light btn-lg">Solicitar Cotação Empresarial →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Virtua / About -->
+    <section class="section why-us" id="quem-somos">
+        <div class="container">
+            <div class="why-us-grid" data-reveal>
+                <div class="why-us-image">
+                    <img src="assets/img/advisor.png" alt="Consultora Virtua Corretora" class="why-us-img">
+                    <div class="why-us-badge">
+                        <span class="why-badge-number">10.000+</span>
+                        <span class="why-badge-text">clientes<br>atendidos</span>
+                    </div>
+                </div>
+                <div class="why-us-content">
+                    <span class="section-tag">Por que a Virtua?</span>
+                    <h2 class="section-title left">Cuidamos de tudo para <span class="gradient-text">você não perder
+                            tempo</span></h2>
+                    <p>Somos especialistas em encontrar o plano ideal para cada perfil. Comparamos dezenas de operadoras
+                        e seguradoras para oferecer o melhor custo-benefício — sem burocracia.</p>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-check">✓</div>
+                            <div>
+                                <strong>Análise personalizada</strong>
+                                <p>Entendemos sua necessidade e indicamos o plano certo</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-check">✓</div>
+                            <div>
+                                <strong>+20 operadoras parceiras</strong>
+                                <p>Amil, Bradesco, SulAmérica, Unimed e muitas outras</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-check">✓</div>
+                            <div>
+                                <strong>Suporte contínuo</strong>
+                                <p>Acompanhamos você antes, durante e depois da contratação</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-check">✓</div>
+                            <div>
+                                <strong>Registro SUSEP</strong>
+                                <p>Corretora 100% regularizada e em conformidade com a LGPD</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="section social-proof" id="avaliacoes">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-tag">Avaliações</span>
+                <h2 class="section-title">O que dizem <span class="gradient-text">nossos clientes</span></h2>
+            </div>
+            <div class="proof-grid" data-reveal>
+                <div class="proof-card google-card">
+                    <div class="proof-header">
+                        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+                            alt="Google" class="proof-logo">
+                    </div>
+                    <div class="proof-score">4.9</div>
+                    <div class="proof-stars">★★★★★</div>
+                    <p class="proof-text">Baseado em <strong>154 avaliações</strong></p>
+                    <span class="proof-badge google">⭐ Excelente</span>
+                </div>
+                <div class="proof-card ra-card">
+                    <div class="proof-header">
+                        <span class="ra-logo">ReclameAQUI</span>
+                    </div>
+                    <div class="proof-score ra">100%</div>
+                    <div class="proof-stars">★★★★★</div>
+                    <p class="proof-text"><strong>100% das reclamações</strong> respondidas</p>
+                    <span class="proof-badge ra">✅ Empresa Comprometida</span>
+                </div>
+                <div class="proof-card counters-card">
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="10000">0</span><span class="counter-suffix">+</span>
+                        <span class="counter-label">Clientes atendidos</span>
+                    </div>
+                    <div class="counter-divider"></div>
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="20">0</span><span class="counter-suffix">+</span>
+                        <span class="counter-label">Operadoras parceiras</span>
+                    </div>
+                    <div class="counter-divider"></div>
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="2">0</span><span class="counter-suffix"></span>
+                        <span class="counter-label">Escritórios no RJ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="section partners">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-tag">Parceiros</span>
+                <h2 class="section-title">Trabalhamos com as <span class="gradient-text">melhores operadoras</span></h2>
+            </div>
+            <div class="partners-slider" data-reveal>
+                <div class="partners-track">
+                    <div class="partner-logo"><span>Amil</span></div>
+                    <div class="partner-logo"><span>Bradesco Saúde</span></div>
+                    <div class="partner-logo"><span>SulAmérica</span></div>
+                    <div class="partner-logo"><span>Porto Seguro</span></div>
+                    <div class="partner-logo"><span>Unimed</span></div>
+                    <div class="partner-logo"><span>Intermédica</span></div>
+                    <div class="partner-logo"><span>Tokio Marine</span></div>
+                    <div class="partner-logo"><span>Assim Saúde</span></div>
+                    <!-- Duplicated for infinite scroll -->
+                    <div class="partner-logo"><span>Amil</span></div>
+                    <div class="partner-logo"><span>Bradesco Saúde</span></div>
+                    <div class="partner-logo"><span>SulAmérica</span></div>
+                    <div class="partner-logo"><span>Porto Seguro</span></div>
+                    <div class="partner-logo"><span>Unimed</span></div>
+                    <div class="partner-logo"><span>Intermédica</span></div>
+                    <div class="partner-logo"><span>Tokio Marine</span></div>
+                    <div class="partner-logo"><span>Assim Saúde</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-tag">Dúvidas Frequentes</span>
+                <h2 class="section-title">Perguntas <span class="gradient-text">frequentes</span></h2>
+            </div>
+            <div class="faq-list" data-reveal>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quais tipos de planos de saúde empresariais estão disponíveis?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oferecemos planos empresariais a partir de 2 vidas, com descontos de 30 a 40% em relação aos
+                            planos individuais. Há opções para funcionários, familiares do titular e categorias
+                            específicas como supervisores e gerentes na modalidade livre adesão ou CBO.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quais operadoras de saúde vocês trabalham?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Trabalhamos com as principais operadoras do mercado: Amil, Bradesco Saúde, SulAmérica,
+                            Unimed, Intermédica, Porto Seguro, Assim Saúde e muitas outras. Comparamos planos de todas
+                            para encontrar o melhor custo-benefício para o seu perfil.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como funciona a cotação de seguro auto?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>É simples: basta nos enviar os dados do motorista principal, dados do veículo e local onde
+                            pernoita. Realizamos cotações nas maiores seguradoras do Brasil para encontrar o melhor
+                            custo-benefício. Na renovação, conseguimos descontos de 10 a 40%.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>A Virtua Corretora é registrada na SUSEP?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim, somos uma corretora registrada na SUSEP (Superintendência de Seguros Privados),
+                            garantindo total conformidade e segurança nas suas operações de seguros. Também operamos em
+                            total conformidade com a LGPD.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quanto tempo leva para ativar meu plano de saúde?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O prazo varia por operadora, mas em geral a ativação ocorre em 24 a 48 horas após a aprovação
+                            cadastral. Carências podem se aplicar dependendo do tipo de plano e da operadora escolhida.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / CTA -->
+    <section class="section contact" id="contato">
+        <div class="container">
+            <div class="contact-grid" data-reveal>
+                <div class="contact-info">
+                    <span class="section-tag light">Fale Conosco</span>
+                    <h2 class="section-title light left">Pronto para encontrar o <span class="gradient-text-light">plano
+                            ideal</span>?</h2>
+                    <p class="contact-desc">Preencha o formulário e um de nossos especialistas entrará em contato em até
+                        24 horas.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                            <span>(22) 99940-4840</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>contato@virtuacorretora.com.br</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>Barra da Tijuca, RJ · Campos dos Goytacazes, RJ</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="Seu WhatsApp" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Seu e-mail">
+                    </div>
+                    <div class="form-group">
+                        <select id="product" required>
+                            <option value="" disabled selected>Selecione o produto</option>
+                            <option value="saude">Plano de Saúde</option>
+                            <option value="odonto">Plano Odontológico</option>
+                            <option value="vida">Seguro de Vida</option>
+                            <option value="auto">Seguro Auto</option>
+                            <option value="viagem">Seguro Viagem</option>
+                            <option value="residencial">Seguro Residencial</option>
+                            <option value="empresarial">Planos Empresariais</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Conte-nos sua necessidade (opcional)" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-full">
+                        Solicitar Cotação Gratuita →
+                    </button>
+                    <p class="form-note">Resposta em até 24h · Sem compromisso</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-icon">V</span>
+                        <span class="logo-text">virtua<small>CORRETORA DE SEGUROS</small></span>
+                    </div>
+                    <p>Corretora de Seguros e Planos de Saúde no Rio de Janeiro. Mais de 10.000 clientes atendidos com
+                        excelência e comprometimento.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Produtos</h4>
+                    <ul>
+                        <li><a href="#">Plano de Saúde</a></li>
+                        <li><a href="#">Plano Odontológico</a></li>
+                        <li><a href="#">Seguro de Vida</a></li>
+                        <li><a href="#">Seguro Auto</a></li>
+                        <li><a href="#">Seguro Viagem</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="#">Quem Somos</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">LGPD</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Escritórios</h4>
+                    <div class="footer-address">
+                        <p><strong>Barra da Tijuca</strong><br>Av. das Américas, 3443<br>Bloco 3B, 2º Andar</p>
+                        <p><strong>Campos dos Goytacazes</strong><br>Rua Barão da Lagoa Dourada, 237<br>Sala 19</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Virtua Corretora de Seguros. Todos os direitos reservados. CNPJ: XX.XXX.XXX/0001-XX | SUSEP:
+                    XXXXX</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/5522999404840" target="_blank" class="whatsapp-float" aria-label="Conversar no WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
