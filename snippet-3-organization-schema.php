@@ -23,7 +23,7 @@ add_action('wp_head', function() {
     "@type": "InsuranceAgency",
     "name": "Virtua Corretora de Seguros",
     "url": "https://www.virtuacorretora.com.br",
-    "logo": "https://www.virtuacorretora.com.br/wp-content/uploads/logo-virtua.png",
+    "logo": "https://www.virtuacorretora.com.br/wp-content/uploads/2023/11/cropped-virtua-corretora-de-planos-de-saude-1.webp",
     "description": "Corretora de Seguros e Planos de Saúde no Rio de Janeiro. Especializada em Plano de Saúde, Plano Odontológico, Seguro de Vida, Seguro Auto e mais.",
     "telephone": ["+5522999404840", "+5522998811541"],
     "email": "contato@virtuacorretora.com.br",

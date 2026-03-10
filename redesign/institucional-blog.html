@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Virtua Corretora de Seguros</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            background: var(--gradient-primary);
+            padding: 120px 0 60px;
+            color: white;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .page-header p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .page-content {
+            padding: 80px 0;
+            background: var(--gray-50);
+        }
+
+        .content-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 50px;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid var(--gray-200);
+            text-align: center;
+        }
+
+        .content-card h2 {
+            color: var(--primary);
+            margin-bottom: 24px;
+            font-size: 32px;
+            font-weight: 800;
+        }
+
+        .content-card p {
+            color: var(--gray-600);
+            margin-bottom: 24px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-contact">
+                <div class="top-bar-phones">
+                    <a href="tel:+5522999404840" class="top-bar-link">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg> (22) 99940-4840
+                    </a>
+                </div>
+                <a href="https://wa.me/5522999404840" target="_blank" class="top-bar-link whatsapp-link">WhatsApp</a>
+            </div>
+            <div class="top-bar-info">
+                <span><a href="index.html"
+                        style="color:var(--white); opacity:0.9; text-decoration:none; display:flex; align-items:center; gap:6px; font-weight:500;"><svg
+                            width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg> Voltar para a Home</a></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="https://www.virtuacorretora.com.br/wp-content/uploads/2023/11/cropped-virtua-corretora-de-planos-de-saude-1.webp" alt="Virtua Logo" style="height: 32px; width: auto; object-fit: contain;">
+                <div class="logo-fallback" style="display: flex;">
+                    <span class="logo-icon">V</span>
+                    <span class="logo-text">virtua<small>CORRETORA DE SEGUROS</small></span>
+                </div>
+            </a>
+            <div class="header-actions">
+                <a href="https://wa.me/5522999404840" target="_blank" class="btn btn-outline"
+                    style="min-height: 44px; display: inline-flex; align-items: center;">Fale com um corretor</a>
+                <button class="btn btn-primary btn-quote quote-modal-trigger" data-product="Geral">Solicitar
+                    Cotação</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Blog da Virtua</h1>
+            <p>Dicas, notícias e guias sobre saúde, seguros e qualidade de vida.</p>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <div class="container">
+            <div class="content-card">
+                <h2 style="font-size: 48px; margin-bottom: 10px;">🚧</h2>
+                <h2>Página em Construção</h2>
+                <p>Nossa equipe está preparando os melhores conteúdos para você. Em breve anunciaremos várias dicas
+                    exclusivas e artigos sobre planos de saúde e seguros em geral. Volte em breve!</p>
+                <a href="index.html" class="btn btn-primary" style="display: inline-block; margin-top: 16px;">Voltar ao
+                    Início</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" style="margin-top: 0;">
+        <div class="container text-center">
+            <p style="color: var(--gray-500);">© 2026 Virtua Corretora de Seguros. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

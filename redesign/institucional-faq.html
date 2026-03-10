@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Virtua Corretora de Seguros</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            background: var(--gradient-primary);
+            padding: 120px 0 60px;
+            color: white;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .page-header p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .page-content {
+            padding: 80px 0;
+            background: var(--gray-50);
+        }
+
+        .content-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 50px;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid var(--gray-200);
+        }
+
+        .faq-item {
+            border: 1px solid var(--gray-200);
+            margin-bottom: 16px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 20px;
+            background: white;
+            border: none;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: inherit;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            background: white;
+            color: var(--gray-600);
+            line-height: 1.6;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-contact">
+                <div class="top-bar-phones">
+                    <a href="tel:+5522999404840" class="top-bar-link">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg> (22) 99940-4840
+                    </a>
+                </div>
+                <a href="https://wa.me/5522999404840" target="_blank" class="top-bar-link whatsapp-link">WhatsApp</a>
+            </div>
+            <div class="top-bar-info">
+                <span><a href="index.html"
+                        style="color:var(--white); opacity:0.9; text-decoration:none; display:flex; align-items:center; gap:6px; font-weight:500;"><svg
+                            width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg> Voltar para a Home</a></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="https://www.virtuacorretora.com.br/wp-content/uploads/2023/11/cropped-virtua-corretora-de-planos-de-saude-1.webp" alt="Virtua Logo" style="height: 32px; width: auto; object-fit: contain;">
+                <div class="logo-fallback" style="display: flex;">
+                    <span class="logo-icon">V</span>
+                    <span class="logo-text">virtua<small>CORRETORA DE SEGUROS</small></span>
+                </div>
+            </a>
+            <div class="header-actions">
+                <a href="https://wa.me/5522999404840" target="_blank" class="btn btn-outline"
+                    style="min-height: 44px; display: inline-flex; align-items: center;">Fale com um corretor</a>
+                <button class="btn btn-primary btn-quote quote-modal-trigger" data-product="Geral">Solicitar
+                    Cotação</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Perguntas Frequentes (FAQ)</h1>
+            <p>Tire suas dúvidas sobre os planos de saúde e seguros.</p>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <div class="container">
+            <div class="content-card" style="padding: 30px;">
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question">Quais são os tipos de contratações de planos de saúde empresariais?
+                            <span class="icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Os planos de saúde empresariais podem ser contratados para redução de custos para a
+                                família do titular da empresa (30 a 40% mais baratos), para funcionários da empresa, ou
+                                para categorias específicas como supervisores e gerentes na modalidade livre adesão ou
+                                CBO. A partir de 02 vidas é possível contratar um plano de saúde empresarial.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Quais são os planos de saúde da Amil? <span
+                                class="icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>A Amil oferece planos nacionais (Amil S380, S450, S750) com cobertura nacional e
+                                benefícios como Telemedicina e descontos em farmácias, além de planos regionais como
+                                Amil Fácil S75 RJ (cobertura no Rio de Janeiro, Duque de Caxias, Niterói, São Gonçalo e
+                                Nova Iguaçu) e Amil Fácil S80 SP para as maiores cidades de 5 estados.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Quais são os planos de saúde do Bradesco? <span
+                                class="icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>O Bradesco comercializa planos regionais no Grande Rio (TRME e TRMQ) e nacionais
+                                (TRWE/TRWQ, FCER/FCQR, TREN/TRQN). Os planos nacionais incluem direito a reembolso, rede
+                                credenciada premium e benefícios exclusivos como seguro viagem nacional e internacional.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Quais são os benefícios do Plano de Saúde SulAmérica? <span
+                                class="icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>A SulAmérica oferece descontos de até 70% em mais de 25 mil farmácias, reembolso 100%
+                                online pelo aplicativo, Telemedicina para consultas imediatas e agendadas, Psicólogo na
+                                Tela, seguro viagem nacional e internacional, e remissão de custos por 2 anos em caso de
+                                falecimento do titular.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Quais são os Planos de Saúde SulAmérica disponíveis? <span
+                                class="icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Os principais planos SulAmérica são: Direto Rio II (regional no Grande Rio com hospitais
+                                como Quinta D'Or e Niterói D'Or), Direto Nacional (opção mais acessível com abrangência
+                                nacional e reembolso), Especial 100 (nacional com rede estendida incluindo Copa D'Or e
+                                Barra D'Or, mais seguro viagem internacional) e Prestige (cobertura premium com
+                                procedimentos sem limite de utilização).</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Quais são os Planos de Saúde Intermédica? <span
+                                class="icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>A Intermédica oferece os planos Smart 200 RJ (regional com cobertura em Itaboraí, Maricá,
+                                Niterói e São Gonçalo), Smart 500 (grupo de municípios incluindo interior do RJ como
+                                Campos, Cabo Frio e Petrópolis) e Advance 600 (nacional com reembolso e programas de
+                                medicina preventiva).</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Quais são os planos de saúde Unimed Ferj? <span
+                                class="icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Os principais planos Unimed FERJ são: Unimed Estilo (estadual com atendimento para
+                                urgência e emergência em todo Brasil, com coparticipação parcial) e Unimed Prime
+                                (nacional, disponível em acomodação coletiva e apartamento com grandes hospitais no
+                                Brasil).</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Qual é o melhor plano de saúde Assim? <span
+                                class="icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>A Assim Saúde oferece: MAX (Rio de Janeiro, São Gonçalo, Duque de Caxias, Mesquita e
+                                Niterói), Clássico (13 municípios), Ideal (27 municípios incluindo interior) e Superior
+                                (melhor rede credenciada, 27 municípios). Cada plano tem uma rede credenciada
+                                específica.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">O que o plano odontológico Amil cobre? <span
+                                class="icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>O plano Amil Dental Clássico (Dental 205) cobre integralmente: urgência, consultas,
+                                prevenção (limpeza e flúor), radiografias, tratamento de gengiva, tratamento para
+                                crianças, tratamento de canal, restaurações, cirurgias e extrações (incluindo siso),
+                                documentação ortodôntica e coroas.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Como funciona a contratação de um seguro auto? <span
+                                class="icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Contratar um seguro auto é simples: são necessários os dados do motorista principal,
+                                dados do veículo e local onde o veículo pernoita. A Virtua Corretora realiza cotações
+                                nas maiores seguradoras do Brasil para encontrar o melhor custo-benefício. Na renovação,
+                                conseguimos descontos de 10 a 40%.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" style="margin-top: 0;">
+        <div class="container text-center">
+            <p style="color: var(--gray-500);">© 2026 Virtua Corretora de Seguros. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('.icon');
+
+                // Toggle current answer
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    icon.textContent = '+';
+                } else {
+                    // Close others
+                    document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
+                    document.querySelectorAll('.faq-question .icon').forEach(icn => icn.textContent = '+');
+
+                    answer.style.display = 'block';
+                    icon.textContent = '-';
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
