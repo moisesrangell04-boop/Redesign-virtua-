@@ -1,47 +1,104 @@
-import os
-import glob
-import re
+"""
+Fix all logos: add the "virtua CORRETORA DE SEGUROS" text back next to the image.
+The webp image is only the shield icon, so we need the text beside it.
+"""
+import os, glob, re
 
 DIRECTORY = r"C:\Users\growt\OneDrive\Documentos\Virtua Corretora\redesign"
-OLD_LOGO = 'https://virtuacorretora.com.br/wp-content/uploads/2024/05/Logo-Virtua-1-1.png'
-NEW_LOGO = 'https://www.virtuacorretora.com.br/wp-content/uploads/2023/11/cropped-virtua-corretora-de-planos-de-saude-1.webp'
+LOGO_URL = "https://www.virtuacorretora.com.br/wp-content/uploads/2023/11/cropped-virtua-corretora-de-planos-de-saude-1.webp"
 
-def update_html_files():
-    html_files = glob.glob(os.path.join(DIRECTORY, "*.html"))
-    updated_count = 0
-    for file in html_files:
-        with open(file, "r", encoding="utf-8") as f:
-            content = f.read()
+# The desired header logo block (image + text, NO logo-icon "V" since the image replaces it)
+HEADER_LOGO_REPLACEMENT = '''<img src="{url}" alt="Virtua Logo" style="height: 32px; width: auto; object-fit: contain;">
+                <span class="logo-text">virtua<small>CORRETORA DE SEGUROS</small></span>'''.format(url=LOGO_URL)
 
-        original_content = content
-        
-        if OLD_LOGO in content:
-            content = content.replace(OLD_LOGO, NEW_LOGO)
-            print(f"Replaced broken logo URL in {os.path.basename(file)}")
+# For index.html header (href="#")
+HEADER_LOGO_REPLACEMENT_HASH = '''<img src="{url}"
+                    alt="Virtua Logo" style="height: 32px; width: auto; object-fit: contain;">
+                <span class="logo-text">virtua<small>CORRETORA DE SEGUROS</small></span>'''.format(url=LOGO_URL)
 
-        if content != original_content:
-            with open(file, "w", encoding="utf-8") as f:
-                f.write(content)
-            updated_count += 1
+# The desired footer logo block
+FOOTER_LOGO_REPLACEMENT = '''<a href="index.html" class="footer-logo" style="text-decoration: none;">
+                        <img src="{url}" alt="Virtua Logo" style="height: 40px; width: auto; object-fit: contain;">
+                        <span class="logo-text">virtua<small>CORRETORA DE SEGUROS</small></span>
+                    </a>'''.format(url=LOGO_URL)
 
-    print(f"Updated {updated_count} HTML files.")
-
-def update_generate_pages():
-    script_path = os.path.join(DIRECTORY, "generate_pages.py")
-    if not os.path.exists(script_path):
-        return
-    with open(script_path, "r", encoding="utf-8") as f:
+def fix_file(filepath):
+    with open(filepath, "r", encoding="utf-8") as f:
         content = f.read()
-    
-    original_content = content
-    if OLD_LOGO in content:
-        content = content.replace(OLD_LOGO, NEW_LOGO)
-        print(f"Replaced broken logo in generate_pages.py")
+    original = content
 
-    if content != original_content:
-        with open(script_path, "w", encoding="utf-8") as f:
+    # ---- FIX HEADER LOGOS ----
+    # Current state: <a href="..." class="logo">
+    #                    <img src="..." ...>
+    #                </a>
+    # We need to add the logo-text span after the img, inside the <a>
+
+    # Pattern for subpages (href="index.html")
+    pattern_sub = (
+        r'(<a\s+href="index\.html"\s+class="logo"[^>]*>)\s*'
+        r'<img\s+src="[^"]*"[^/]*/?>\s*'
+        r'(</a>)'
+    )
+    def repl_sub(m):
+        return m.group(1) + '\n                ' + HEADER_LOGO_REPLACEMENT + '\n            ' + m.group(2)
+    content = re.sub(pattern_sub, repl_sub, content, flags=re.DOTALL)
+
+    # Pattern for index.html (href="#")
+    pattern_index = (
+        r'(<a\s+href="#"\s+class="logo"[^>]*>)\s*'
+        r'<img\s+src="[^"]*"[^/]*/?>\s*'
+        r'(</a>)'
+    )
+    def repl_index(m):
+        return m.group(1) + '\n                ' + HEADER_LOGO_REPLACEMENT_HASH + '\n            ' + m.group(2)
+    content = re.sub(pattern_index, repl_index, content, flags=re.DOTALL)
+
+    # ---- FIX FOOTER LOGO (index.html) ----
+    # Current: <a href="index.html" class="footer-logo" ...><img ...></a>
+    # Need to add text span
+    pattern_footer = (
+        r'<a\s+href="index\.html"\s+class="footer-logo"[^>]*>\s*'
+        r'<img\s+src="[^"]*"[^/]*/?>\s*'
+        r'</a>'
+    )
+    content = re.sub(pattern_footer, FOOTER_LOGO_REPLACEMENT, content, flags=re.DOTALL)
+
+    if content != original:
+        with open(filepath, "w", encoding="utf-8") as f:
             f.write(content)
+        return True
+    return False
+
+def fix_generate_pages():
+    filepath = os.path.join(DIRECTORY, "generate_pages.py")
+    with open(filepath, "r", encoding="utf-8") as f:
+        content = f.read()
+    original = content
+
+    # Same pattern for subpages
+    pattern = (
+        r'(<a\s+href="index\.html"\s+class="logo"[^>]*>)\s*'
+        r'<img\s+src="[^"]*"[^/]*/?>\s*'
+        r'(</a>)'
+    )
+    def repl(m):
+        return m.group(1) + '\n                ' + HEADER_LOGO_REPLACEMENT + '\n            ' + m.group(2)
+    content = re.sub(pattern, repl, content, flags=re.DOTALL)
+
+    if content != original:
+        with open(filepath, "w", encoding="utf-8") as f:
+            f.write(content)
+        print(f"  Fixed: generate_pages.py")
+        return True
+    return False
 
 if __name__ == "__main__":
-    update_html_files()
-    update_generate_pages()
+    html_files = sorted(glob.glob(os.path.join(DIRECTORY, "*.html")))
+    updated = 0
+    for f in html_files:
+        if fix_file(f):
+            print(f"  Fixed: {os.path.basename(f)}")
+            updated += 1
+    if fix_generate_pages():
+        updated += 1
+    print(f"\nTotal files updated: {updated}")

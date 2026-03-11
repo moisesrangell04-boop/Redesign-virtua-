@@ -1,0 +1,86 @@
+# ==================================================================
+# Virtua Corretora - .htaccess
+# Configurações para o novo site estático
+# ==================================================================
+
+# Habilitar RewriteEngine
+RewriteEngine On
+
+# Forçar HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Forçar www
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ==================================================================
+# Clean URLs - Servir index.html para URLs com trailing slash
+# ==================================================================
+# Se a URL é um diretório e tem index.html, servir o index.html
+DirectoryIndex index.html
+
+# ==================================================================
+# Páginas de erro personalizadas
+# ==================================================================
+ErrorDocument 404 /index.html
+
+# ==================================================================
+# Cache Control - Performance
+# ==================================================================
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # HTML - 1 hora
+    ExpiresByType text/html "access plus 1 hour"
+    
+    # CSS e JavaScript - 1 mês
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    
+    # Imagens - 1 mês
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 month"
+    
+    # Fontes - 1 ano
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+</IfModule>
+
+# ==================================================================
+# Compressão GZIP
+# ==================================================================
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE application/xml
+</IfModule>
+
+# ==================================================================
+# Headers de Segurança
+# ==================================================================
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ==================================================================
+# 301 Redirects - Páginas de prioridade média/baixa do WordPress
+# ==================================================================
+# Redirecionar páginas antigas que não foram recriadas para a home
+# ou para a página mais relevante
+
+# Redirecionamentos de prioridade média (páginas não recriadas)
+# Descomente e ajuste conforme necessário:
+# Redirect 301 /pagina-antiga/ https://www.virtuacorretora.com.br/

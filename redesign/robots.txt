@@ -1,0 +1,15 @@
+# robots.txt - Virtua Corretora
+# https://www.virtuacorretora.com.br/
+
+User-agent: *
+Allow: /
+
+# Bloquear arquivos de desenvolvimento
+Disallow: /generate_operator_pages*.py
+Disallow: /fix_logo.py
+Disallow: /revert_index.py
+Disallow: /html.txt
+Disallow: /live_site.html
+
+# Sitemap
+Sitemap: https://www.virtuacorretora.com.br/sitemap.xml
