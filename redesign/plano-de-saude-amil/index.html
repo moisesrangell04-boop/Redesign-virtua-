@@ -267,12 +267,52 @@
     </div>
 
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container header-inner">
             <a href="../index.html" class="logo">
                 <img src="https://www.virtuacorretora.com.br/wp-content/uploads/2023/11/cropped-virtua-corretora-de-planos-de-saude-1.webp" alt="Virtua Logo" style="height: 32px; width: auto; object-fit: contain;">
                 <span class="logo-text">virtua<small>CORRETORA DE SEGUROS</small></span>
             </a>
+            
+            <nav id="nav" class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#produtos" class="nav-link">Produtos <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-grid">
+                                <a href="../plano-de-saude-amil/index.html" class="dropdown-item">
+                                    <span class="dropdown-icon">🏥</span> Amil
+                                </a>
+                                <a href="../plano-de-saude-sulamerica/index.html" class="dropdown-item">
+                                    <span class="dropdown-icon">🛡️</span> SulAmérica
+                                </a>
+                                <a href="../plano-de-saude-bradesco/index.html" class="dropdown-item">
+                                    <span class="dropdown-icon">⭐</span> Bradesco Saúde
+                                </a>
+                                <a href="../plano-de-saude-unimed/index.html" class="dropdown-item">
+                                    <span class="dropdown-icon">💚</span> Unimed
+                                </a>
+                                <a href="../plano-odonto-empresarial/index.html" class="dropdown-item">
+                                    <span class="dropdown-icon">🦷</span> Planos Odonto
+                                </a>
+                                <a href="../simulacao-seguro-de-vida/index.html" class="dropdown-item">
+                                    <span class="dropdown-icon">👨‍👩‍👦</span> Seguro de Vida
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="../index.html#quem-somos" class="nav-link">Quem Somos</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="#" class="nav-link open-contact-modal">Contato</a></li>
+                </ul>
+            </nav>
+
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <a href="https://wa.me/5522999404840" target="_blank" class="btn btn-primary header-cta">Fale pelo WhatsApp</a>
         </div>
     </header>
@@ -453,6 +493,7 @@
         </div>
     </footer>
 
+    <script src="../script.js"></script>
     <script>
     document.querySelectorAll('.op-faq-question').forEach(q => {
         q.addEventListener('click', () => {

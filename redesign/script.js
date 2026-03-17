@@ -50,8 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
     dropdownToggles.forEach(toggle => {
         toggle.addEventListener('click', (e) => {
             if (window.innerWidth <= 768) {
-                e.preventDefault();
-                toggle.parentElement.classList.toggle('open');
+                const parent = toggle.parentElement;
+                if(parent.classList.contains('nav-dropdown')) {
+                   e.preventDefault();
+                   parent.classList.toggle('open');
+                }
             }
         });
     });
