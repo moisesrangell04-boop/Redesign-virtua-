@@ -5,11 +5,12 @@ User-agent: *
 Allow: /
 
 # Bloquear arquivos de desenvolvimento
-Disallow: /generate_operator_pages*.py
-Disallow: /fix_logo.py
-Disallow: /revert_index.py
+Disallow: /*.py$
 Disallow: /html.txt
 Disallow: /live_site.html
+Disallow: /tmp_logos/
+Disallow: /assets/logos/
+Disallow: /__pycache__/
 
 # Sitemap
 Sitemap: https://www.virtuacorretora.com.br/sitemap.xml

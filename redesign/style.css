@@ -193,6 +193,41 @@ button {
 }
 
 /* ===========================
+   HERO BUTTONS (For pages/cta-banners)
+   =========================== */
+.btn-hero {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 36px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-hero-primary {
+    background: var(--white);
+    color: var(--primary-dark);
+}
+
+.btn-hero-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.btn-hero-outline {
+    border: 2px solid rgba(255,255,255,0.6);
+    color: var(--white);
+    background: transparent;
+}
+
+.btn-hero-outline:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+/* ===========================
    TOP BAR
    =========================== */
 .top-bar {
@@ -1103,8 +1138,12 @@ button {
     padding: 0 24px;
     border: 1px solid var(--gray-200);
     transition: all 0.3s ease;
-    cursor: default;
+    cursor: pointer;
     position: relative;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+    flex-shrink: 0;
 }
 
 .partners-track:hover {
@@ -1547,11 +1586,12 @@ button {
     }
 
     .nav {
-        position: fixed;
-        top: 72px; /* Header height */
+        position: absolute;
+        top: 100%; /* Directly below the sticky header */
         left: 0;
         right: 0;
-        bottom: 0;
+        width: 100%;
+        height: calc(100vh - 72px);
         background: #ffffff !important;
         padding: 24px;
         transform: translateX(100%);
@@ -1826,4 +1866,102 @@ button {
     font-size: 13px;
     color: var(--gray-400);
     margin-top: 16px;
+}
+
+/* Product-specific extra fields */
+.extra-fields {
+    display: none;
+    border-top: 1px solid var(--gray-200);
+    padding-top: 16px;
+    margin-bottom: 16px;
+    animation: fadeInDown 0.25s ease;
+}
+
+.extra-fields.visible {
+    display: block;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.extra-fields-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-700);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.extra-fields-label-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    color: var(--gray-700);
+}
+
+.radio-option input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.age-ranges-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.age-range-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.age-range-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--gray-500);
+}
+
+.age-range-select {
+    padding: 10px 12px !important;
+    font-size: 14px !important;
+}
+
+.quote-modal-form input[type="date"],
+.quote-modal-form input[type="number"] {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    font-size: 15px;
+    background: var(--gray-50);
+    color: var(--gray-900);
+    transition: all 0.3s ease;
+}
+
+.quote-modal-form input[type="date"]:focus,
+.quote-modal-form input[type="number"]:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: var(--white);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
 }
