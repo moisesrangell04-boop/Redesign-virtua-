@@ -308,6 +308,48 @@
         ]
     }
     </script>
+
+    <style>
+    .content-section { padding: 72px 0; }
+    .content-section.alt { background: #f8fafc; }
+    .content-section .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .cs-title { font-size: clamp(22px, 2.5vw, 30px); font-weight: 800; color: #1e293b; margin: 0 0 12px; }
+    .cs-lead { font-size: 16px; color: #475569; line-height: 1.8; margin: 0 0 32px; }
+    .cs-body { font-size: 15px; color: #374151; line-height: 1.85; }
+    .cs-body p { margin: 0 0 18px; }
+    .cs-body strong { color: #1e293b; }
+    .coverage-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 16px; margin-top: 28px; }
+    .coverage-item { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px 22px; }
+    .coverage-item h4 { font-size: 14px; font-weight: 700; color: #1e293b; margin: 0 0 6px; }
+    .coverage-item p { font-size: 13px; color: #64748b; margin: 0; line-height: 1.6; }
+    .price-table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 14px; }
+    .price-table th { background: #1e40af; color: white; padding: 12px 16px; text-align: left; font-weight: 600; }
+    .price-table td { padding: 11px 16px; border-bottom: 1px solid #e2e8f0; color: #374151; }
+    .price-table tr:nth-child(even) td { background: #f8fafc; }
+    .price-table tr:hover td { background: #eff6ff; }
+    .steps-list { list-style: none; padding: 0; margin: 24px 0 0; counter-reset: steps; }
+    .steps-list li { counter-increment: steps; display: flex; gap: 18px; align-items: flex-start; margin-bottom: 20px; }
+    .steps-list li::before { content: counter(steps); min-width: 36px; height: 36px; border-radius: 50%; background: #1e40af; color: white; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .steps-list li div h4 { font-size: 15px; font-weight: 700; color: #1e293b; margin: 0 0 4px; }
+    .steps-list li div p { font-size: 14px; color: #475569; margin: 0; line-height: 1.6; }
+    .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 28px; }
+    .pros-cons > div { border-radius: 14px; padding: 24px 26px; }
+    .pros { background: #f0fdf4; border: 1px solid #bbf7d0; }
+    .cons { background: #fff7ed; border: 1px solid #fed7aa; }
+    .pros h4 { color: #15803d; font-size: 16px; font-weight: 700; margin: 0 0 14px; }
+    .cons h4 { color: #c2410c; font-size: 16px; font-weight: 700; margin: 0 0 14px; }
+    .pros ul, .cons ul { list-style: none; padding: 0; margin: 0; }
+    .pros li, .cons li { font-size: 14px; padding: 5px 0; padding-left: 22px; position: relative; color: #374151; line-height: 1.5; }
+    .pros li::before { content: "✓"; position: absolute; left: 0; color: #16a34a; font-weight: 700; }
+    .cons li::before { content: "✗"; position: absolute; left: 0; color: #ea580c; font-weight: 700; }
+    .carencia-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px; }
+    .carencia-table th { background: #0f172a; color: white; padding: 11px 16px; text-align: left; font-weight: 600; }
+    .carencia-table td { padding: 10px 16px; border-bottom: 1px solid #e2e8f0; }
+    .carencia-table tr:nth-child(even) td { background: #f8fafc; }
+    .highlight-box { background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 24px 0; }
+    .highlight-box p { margin: 0; font-size: 14px; color: #1e3a8a; line-height: 1.7; }
+    @media(max-width:768px){ .pros-cons { grid-template-columns:1fr; } .price-table { font-size:12px; } }
+    </style>
 </head>
 <body>
     <!-- Top Bar -->
@@ -490,6 +532,131 @@
             </div>
         </div>
     </section>
+
+    <!-- SEÇÃO: Sobre a Amil -->
+    <section class="content-section alt">
+      <div class="container">
+        <h2 class="cs-title">Sobre a Amil: Uma das Maiores Operadoras do Brasil</h2>
+        <p class="cs-lead">Fundada em 1972, a Amil é hoje uma das maiores e mais reconhecidas operadoras de planos de saúde do Brasil, parte do grupo <strong>UnitedHealth Group</strong> — maior empresa de saúde do mundo. Com mais de 50 anos de história, atende mais de 2 milhões de beneficiários em todo o país.</p>
+        <div class="cs-body">
+          <p>A Amil possui uma das maiores <strong>redes credenciadas do Brasil</strong>, com mais de 15.000 prestadores entre hospitais, clínicas, laboratórios e médicos. Destaque para hospitais premium como <strong>Copa D'Or</strong>, <strong>Copa Star</strong>, <strong>Hospital Samaritano</strong>, <strong>Americas Medical City</strong> e toda a <strong>Rede D'Or São Luiz</strong>.</p>
+          <p>Além dos planos tradicionais, a Amil investe fortemente em <strong>saúde digital</strong>: o aplicativo Amil permite agendamento de consultas, acesso a resultados de exames, segunda opinião médica e consultas de telemedicina pela <strong>Amil Clínica Digital</strong>, disponível 24 horas por dia.</p>
+          <p>Para empresas, a Amil oferece planos coletivos com excelente custo-benefício a partir de <strong>2 vidas (MEI)</strong>, com economia de até 40% em relação ao plano individual. O corretor autorizado Virtua negocia diretamente com a operadora as melhores tabelas para o seu perfil.</p>
+          <div class="highlight-box"><p>💡 <strong>Dica Virtua:</strong> A Amil é indicada para quem busca uma rede premium e cobertura nacional. Se você mora em cidades como Rio de Janeiro, São Paulo, Belo Horizonte ou Curitiba e quer acesso aos melhores hospitais, a Amil é uma das melhores escolhas do mercado em 2026.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: Cobertura -->
+    <section class="content-section">
+      <div class="container">
+        <h2 class="cs-title">O Que o Plano de Saúde Amil Cobre?</h2>
+        <p class="cs-lead">A Amil segue obrigatoriamente o <strong>rol de procedimentos da ANS</strong> (Agência Nacional de Saúde Suplementar), que garante cobertura mínima a todos os beneficiários. Além disso, oferece coberturas adicionais dependendo do plano contratado.</p>
+        <div class="coverage-grid">
+          <div class="coverage-item"><h4>🏥 Internações Hospitalares</h4><p>Internações clínicas, cirúrgicas e em UTI, com cobertura em enfermaria ou apartamento conforme o plano.</p></div>
+          <div class="coverage-item"><h4>🔬 Exames e Diagnósticos</h4><p>Hemograma, raio-X, tomografia, ressonância magnética, ecocardiograma, ultrassom e mais de 3.000 procedimentos diagnósticos.</p></div>
+          <div class="coverage-item"><h4>👨‍⚕️ Consultas Médicas</h4><p>Consultas em todas as especialidades da rede credenciada: cardiologia, ortopedia, neurologia, ginecologia, pediatria e mais.</p></div>
+          <div class="coverage-item"><h4>🚑 Urgência e Emergência</h4><p>Pronto-socorro 24h em toda a rede credenciada nacional. Cobertura de emergência em qualquer localidade do Brasil.</p></div>
+          <div class="coverage-item"><h4>💊 Procedimentos Ambulatoriais</h4><p>Quimioterapia, radioterapia, hemodiálise, fisioterapia e todos os procedimentos ambulatoriais previstos pela ANS.</p></div>
+          <div class="coverage-item"><h4>🤱 Maternidade</h4><p>Pré-natal, parto normal e cesárea, UTI neonatal e acompanhamento do recém-nascido nos primeiros 30 dias.</p></div>
+          <div class="coverage-item"><h4>🧠 Saúde Mental</h4><p>Consultas com psiquiatra e psicólogo, internações em clínicas psiquiátricas conforme regulamentação ANS.</p></div>
+          <div class="coverage-item"><h4>📱 Telemedicina</h4><p>Consultas online pelo app Amil Clínica Digital, disponível 24h para clínicos gerais e especialistas selecionados.</p></div>
+          <div class="coverage-item"><h4>🦷 Odontologia (opcional)</h4><p>Plano dental Amil pode ser contratado junto ao plano médico com cobertura para prevenção, restaurações e mais.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: Tabela de Preços -->
+    <section class="content-section alt">
+      <div class="container">
+        <h2 class="cs-title">Tabela de Preços Amil 2026 por Faixa Etária</h2>
+        <p class="cs-lead">Os valores dos planos de saúde Amil variam conforme a <strong>faixa etária</strong>, o <strong>tipo de acomodação</strong> (enfermaria ou apartamento), a <strong>abrangência</strong> (regional ou nacional) e a <strong>coparticipação</strong>. Abaixo, uma estimativa de preços para planos individuais:</p>
+        <div style="overflow-x:auto;">
+          <table class="price-table">
+            <thead><tr><th>Faixa Etária</th><th>Amil Fácil (Regional)</th><th>Amil 400 (Nacional)</th><th>Amil 750 (Premium)</th></tr></thead>
+            <tbody>
+              <tr><td>0 a 18 anos</td><td>R$ 180 – R$ 280</td><td>R$ 280 – R$ 420</td><td>R$ 420 – R$ 680</td></tr>
+              <tr><td>19 a 23 anos</td><td>R$ 190 – R$ 290</td><td>R$ 300 – R$ 450</td><td>R$ 440 – R$ 700</td></tr>
+              <tr><td>24 a 28 anos</td><td>R$ 200 – R$ 320</td><td>R$ 320 – R$ 480</td><td>R$ 460 – R$ 730</td></tr>
+              <tr><td>29 a 33 anos</td><td>R$ 230 – R$ 360</td><td>R$ 360 – R$ 540</td><td>R$ 510 – R$ 820</td></tr>
+              <tr><td>34 a 38 anos</td><td>R$ 270 – R$ 420</td><td>R$ 420 – R$ 630</td><td>R$ 590 – R$ 950</td></tr>
+              <tr><td>39 a 43 anos</td><td>R$ 320 – R$ 510</td><td>R$ 510 – R$ 760</td><td>R$ 710 – R$ 1.140</td></tr>
+              <tr><td>44 a 48 anos</td><td>R$ 420 – R$ 670</td><td>R$ 670 – R$ 1.000</td><td>R$ 930 – R$ 1.490</td></tr>
+              <tr><td>49 a 53 anos</td><td>R$ 580 – R$ 930</td><td>R$ 930 – R$ 1.390</td><td>R$ 1.290 – R$ 2.070</td></tr>
+              <tr><td>54 a 58 anos</td><td>R$ 760 – R$ 1.220</td><td>R$ 1.220 – R$ 1.820</td><td>R$ 1.690 – R$ 2.710</td></tr>
+              <tr><td>59 anos ou mais</td><td>R$ 1.080 – R$ 1.730</td><td>R$ 1.730 – R$ 2.590</td><td>R$ 2.400 – R$ 3.840</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="highlight-box" style="margin-top:20px;"><p>⚠️ <strong>Atenção:</strong> Os valores acima são estimativas de referência para 2026. O preço exato depende da cidade, do plano específico, da coparticipação e das condições negociadas. <strong>Solicite uma cotação gratuita</strong> com a Virtua para o valor exato para seu perfil.</p></div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: Carência -->
+    <section class="content-section">
+      <div class="container">
+        <h2 class="cs-title">Carência do Plano Amil: O Que Saber Antes de Contratar</h2>
+        <p class="cs-lead">A <strong>carência</strong> é o período mínimo que o beneficiário precisa aguardar após a contratação antes de utilizar determinados serviços. A ANS estabelece prazos máximos que todas as operadoras devem respeitar.</p>
+        <div style="overflow-x:auto;">
+          <table class="carencia-table">
+            <thead><tr><th>Tipo de Atendimento</th><th>Carência Máxima (ANS)</th><th>Amil (Média Praticada)</th></tr></thead>
+            <tbody>
+              <tr><td>Urgência e emergência</td><td>24 horas</td><td>24 horas</td></tr>
+              <tr><td>Consultas e exames simples</td><td>30 dias</td><td>30 dias</td></tr>
+              <tr><td>Internações e cirurgias</td><td>180 dias</td><td>180 dias</td></tr>
+              <tr><td>Parto a termo (normal ou cesárea)</td><td>300 dias</td><td>300 dias</td></tr>
+              <tr><td>Doenças e lesões preexistentes</td><td>24 meses*</td><td>24 meses*</td></tr>
+              <tr><td>Tratamentos odontológicos (se incluso)</td><td>até 180 dias</td><td>até 60 dias</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:13px;color:#94a3b8;margin-top:10px;">*Para doenças ou lesões preexistentes declaradas, pode-se optar pela cobertura parcial temporária (CPT) ou aguardar 24 meses. A portabilidade de carências elimina esse prazo se você já tiver plano ativo.</p>
+        <div class="highlight-box"><p>💡 <strong>Portabilidade de Carências:</strong> Se você já tem um plano de saúde ativo há pelo menos 2 anos, pode fazer a portabilidade para a Amil <strong>sem cumprir novas carências</strong> para os mesmos procedimentos. Consulte a Virtua para verificar sua elegibilidade.</p></div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: Como Contratar -->
+    <section class="content-section alt">
+      <div class="container">
+        <h2 class="cs-title">Como Contratar Plano de Saúde Amil em 2026</h2>
+        <p class="cs-lead">Contratar um plano Amil pela Virtua Corretora é simples, rápido e 100% gratuito. Veja o passo a passo:</p>
+        <ul class="steps-list">
+          <li><div><h4>Solicite sua cotação gratuita</h4><p>Entre em contato pelo WhatsApp <strong>(22) 99940-4840</strong> ou preencha o formulário. Informe sua cidade, idade, número de dependentes e tipo de plano desejado.</p></div></li>
+          <li><div><h4>Receba a proposta personalizada</h4><p>Nossa equipe envia uma comparação de planos Amil disponíveis para o seu perfil, com preços, coberturas e rede credenciada em até 24h.</p></div></li>
+          <li><div><h4>Escolha o plano ideal</h4><p>Tiramos todas as suas dúvidas sobre cobertura, carência, coparticipação e rede. Você decide sem pressão.</p></div></li>
+          <li><div><h4>Envio da documentação</h4><p>Documentos exigidos: RG, CPF, comprovante de residência e declaração de saúde (para planos individuais). Para empresas: CNPJ e lista de beneficiários.</p></div></li>
+          <li><div><h4>Assinatura e ativação</h4><p>Contrato assinado digitalmente. Após confirmação do pagamento da 1ª mensalidade, a carteirinha digital fica disponível em 24–48h pelo app Amil.</p></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: Vantagens e Desvantagens -->
+    <section class="content-section">
+      <div class="container">
+        <h2 class="cs-title">Plano de Saúde Amil Vale a Pena? Vantagens e Desvantagens</h2>
+        <p class="cs-lead">Para ajudá-lo a tomar a melhor decisão, listamos os principais pontos positivos e negativos da Amil em 2026, com base na experiência dos nossos clientes e avaliações do setor.</p>
+        <div class="pros-cons">
+          <div class="pros"><h4>✅ Vantagens da Amil</h4><ul>
+            <li>Uma das maiores redes credenciadas do Brasil</li>
+            <li>Hospitais premium: Copa D'Or, Samaritano, Rede D'Or</li>
+            <li>Cobertura nacional em todos os planos (exceto Amil Fácil)</li>
+            <li>Amil Clínica Digital: telemedicina 24h</li>
+            <li>App completo para agendamentos e exames</li>
+            <li>Planos para MEI a partir de 2 vidas</li>
+            <li>Cobertura internacional em planos premium</li>
+            <li>Ampla rede de laboratórios (Dasa, Labs a+)</li>
+          </ul></div>
+          <div class="cons"><h4>⚠️ Pontos de Atenção</h4><ul>
+            <li>Preço mais elevado que operadoras regionais</li>
+            <li>Coparticipação em alguns modelos de plano</li>
+            <li>Amil Fácil tem cobertura apenas regional</li>
+            <li>Reajustes anuais conforme tabela ANS</li>
+            <li>Planos individuais mais limitados que coletivos</li>
+          </ul></div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- Network -->
     <section class="section network-section">

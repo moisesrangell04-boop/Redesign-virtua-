@@ -294,6 +294,48 @@
         ]
     }
     </script>
+
+    <style>
+    .content-section { padding: 72px 0; }
+    .content-section.alt { background: #f8fafc; }
+    .content-section .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .cs-title { font-size: clamp(22px, 2.5vw, 30px); font-weight: 800; color: #1e293b; margin: 0 0 12px; }
+    .cs-lead { font-size: 16px; color: #475569; line-height: 1.8; margin: 0 0 32px; }
+    .cs-body { font-size: 15px; color: #374151; line-height: 1.85; }
+    .cs-body p { margin: 0 0 18px; }
+    .cs-body strong { color: #1e293b; }
+    .coverage-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 16px; margin-top: 28px; }
+    .coverage-item { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px 22px; }
+    .coverage-item h4 { font-size: 14px; font-weight: 700; color: #1e293b; margin: 0 0 6px; }
+    .coverage-item p { font-size: 13px; color: #64748b; margin: 0; line-height: 1.6; }
+    .price-table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 14px; }
+    .price-table th { background: #1e40af; color: white; padding: 12px 16px; text-align: left; font-weight: 600; }
+    .price-table td { padding: 11px 16px; border-bottom: 1px solid #e2e8f0; color: #374151; }
+    .price-table tr:nth-child(even) td { background: #f8fafc; }
+    .price-table tr:hover td { background: #eff6ff; }
+    .steps-list { list-style: none; padding: 0; margin: 24px 0 0; counter-reset: steps; }
+    .steps-list li { counter-increment: steps; display: flex; gap: 18px; align-items: flex-start; margin-bottom: 20px; }
+    .steps-list li::before { content: counter(steps); min-width: 36px; height: 36px; border-radius: 50%; background: #1e40af; color: white; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .steps-list li div h4 { font-size: 15px; font-weight: 700; color: #1e293b; margin: 0 0 4px; }
+    .steps-list li div p { font-size: 14px; color: #475569; margin: 0; line-height: 1.6; }
+    .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 28px; }
+    .pros-cons > div { border-radius: 14px; padding: 24px 26px; }
+    .pros { background: #f0fdf4; border: 1px solid #bbf7d0; }
+    .cons { background: #fff7ed; border: 1px solid #fed7aa; }
+    .pros h4 { color: #15803d; font-size: 16px; font-weight: 700; margin: 0 0 14px; }
+    .cons h4 { color: #c2410c; font-size: 16px; font-weight: 700; margin: 0 0 14px; }
+    .pros ul, .cons ul { list-style: none; padding: 0; margin: 0; }
+    .pros li, .cons li { font-size: 14px; padding: 5px 0; padding-left: 22px; position: relative; color: #374151; line-height: 1.5; }
+    .pros li::before { content: "✓"; position: absolute; left: 0; color: #16a34a; font-weight: 700; }
+    .cons li::before { content: "✗"; position: absolute; left: 0; color: #ea580c; font-weight: 700; }
+    .carencia-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px; }
+    .carencia-table th { background: #0f172a; color: white; padding: 11px 16px; text-align: left; font-weight: 600; }
+    .carencia-table td { padding: 10px 16px; border-bottom: 1px solid #e2e8f0; }
+    .carencia-table tr:nth-child(even) td { background: #f8fafc; }
+    .highlight-box { background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 24px 0; }
+    .highlight-box p { margin: 0; font-size: 14px; color: #1e3a8a; line-height: 1.7; }
+    @media(max-width:768px){ .pros-cons { grid-template-columns:1fr; } .price-table { font-size:12px; } }
+    </style>
 </head>
 <body>
     <!-- Top Bar -->
@@ -476,6 +518,118 @@
             </div>
         </div>
     </section>
+
+    <section class="content-section alt">
+      <div class="container">
+        <h2 class="cs-title">Sobre o Bradesco Saúde: Tradição e Excelência no Brasil</h2>
+        <p class="cs-lead">O <strong>Bradesco Saúde</strong> é um dos líderes do mercado de planos de saúde no Brasil, parte do <strong>Grupo Bradesco Seguros</strong>, o maior conglomerado de seguros da América Latina. Com mais de 60 anos de atuação, atende mais de 4 milhões de beneficiários e é reconhecido pela qualidade da rede credenciada e solidez financeira.</p>
+        <div class="cs-body">
+          <p>A grande diferença do Bradesco Saúde está no acesso a hospitais de referência nacional como <strong>Hospital Albert Einstein</strong>, <strong>Hospital Sírio-Libanês</strong>, <strong>Copa D'Or</strong> e <strong>Hospital Israelita Albert Einstein</strong> — os mais conceituados do país. Essa rede premium é exclusiva dos planos de maior cobertura.</p>
+          <p>Para empresas, o Bradesco Saúde é uma das operadoras mais contratadas por grandes corporações, com condições especiais para grupos a partir de 2 vidas (MEI e PME). Oferece ainda o programa <strong>Bradesco Saúde Empresas</strong> com gestão de saúde corporativa e relatórios de sinistralidade.</p>
+          <p>Os planos <strong>Bradesco Top Nacional</strong> e <strong>Bradesco Preferencial Plus</strong> são os mais completos do mercado, com reembolso diferenciado, livre escolha de médico e cobertura internacional.</p>
+          <div class="highlight-box"><p>💡 <strong>Dica Virtua:</strong> O Bradesco Saúde é ideal para quem prioriza acesso aos melhores hospitais do Brasil e qualidade comprovada. A Virtua é corretora autorizada Bradesco e garante as melhores tabelas disponíveis para seu perfil.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2 class="cs-title">Cobertura do Plano de Saúde Bradesco em 2026</h2>
+        <p class="cs-lead">O Bradesco Saúde cobre todos os procedimentos do rol da ANS, com coberturas adicionais nos planos mais completos.</p>
+        <div class="coverage-grid">
+          <div class="coverage-item"><h4>🏥 Internação e UTI</h4><p>Internações clínicas e cirúrgicas em enfermaria ou apartamento, com acesso a UTI nas principais redes.</p></div>
+          <div class="coverage-item"><h4>🔬 Exames de Alta Complexidade</h4><p>Tomografia, PET-CT, ressonância magnética, cateterismo, densitometria óssea e procedimentos de alta complexidade.</p></div>
+          <div class="coverage-item"><h4>👨‍⚕️ Consultas Especializadas</h4><p>Acesso a especialistas renomados em cardiologia, oncologia, neurologia, ortopedia e mais de 50 especialidades.</p></div>
+          <div class="coverage-item"><h4>🎗️ Oncologia</h4><p>Tratamento completo do câncer: quimioterapia, radioterapia, cirurgia oncológica e medicamentos oncológicos.</p></div>
+          <div class="coverage-item"><h4>👶 Maternidade Completa</h4><p>Pré-natal, parto, UTI neonatal e acompanhamento do bebê nos primeiros 30 dias de vida.</p></div>
+          <div class="coverage-item"><h4>🧠 Saúde Mental</h4><p>Consultas com psiquiatra e psicólogo, internações em clínicas especializadas conforme ANS.</p></div>
+          <div class="coverage-item"><h4>🌎 Cobertura Internacional</h4><p>Planos top incluem cobertura de urgência e emergência no exterior, com reembolso em dólar.</p></div>
+          <div class="coverage-item"><h4>💊 Medicamentos (internação)</h4><p>Medicamentos utilizados durante internações hospitalares estão cobertos pelo plano.</p></div>
+          <div class="coverage-item"><h4>🦷 Bradesco Dental</h4><p>Possibilidade de incluir plano odontológico Bradesco Dental com cobertura para prevenção, restaurações e ortodontia.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section alt">
+      <div class="container">
+        <h2 class="cs-title">Tabela de Preços Bradesco Saúde 2026</h2>
+        <p class="cs-lead">Os preços do Bradesco Saúde variam por faixa etária, produto, abrangência e modalidade. Estimativas para planos individuais:</p>
+        <div style="overflow-x:auto;">
+          <table class="price-table">
+            <thead><tr><th>Faixa Etária</th><th>Bradesco Efetivo</th><th>Bradesco Nacional Flex</th><th>Bradesco Top Nacional</th></tr></thead>
+            <tbody>
+              <tr><td>0 a 18 anos</td><td>R$ 160 – R$ 260</td><td>R$ 290 – R$ 440</td><td>R$ 500 – R$ 780</td></tr>
+              <tr><td>19 a 23 anos</td><td>R$ 175 – R$ 275</td><td>R$ 310 – R$ 470</td><td>R$ 530 – R$ 820</td></tr>
+              <tr><td>24 a 28 anos</td><td>R$ 195 – R$ 305</td><td>R$ 340 – R$ 510</td><td>R$ 580 – R$ 900</td></tr>
+              <tr><td>29 a 33 anos</td><td>R$ 230 – R$ 360</td><td>R$ 390 – R$ 590</td><td>R$ 670 – R$ 1.040</td></tr>
+              <tr><td>34 a 38 anos</td><td>R$ 275 – R$ 430</td><td>R$ 460 – R$ 700</td><td>R$ 790 – R$ 1.230</td></tr>
+              <tr><td>39 a 43 anos</td><td>R$ 330 – R$ 520</td><td>R$ 560 – R$ 850</td><td>R$ 960 – R$ 1.490</td></tr>
+              <tr><td>44 a 48 anos</td><td>R$ 435 – R$ 685</td><td>R$ 730 – R$ 1.110</td><td>R$ 1.250 – R$ 1.950</td></tr>
+              <tr><td>49 a 53 anos</td><td>R$ 605 – R$ 950</td><td>R$ 1.010 – R$ 1.540</td><td>R$ 1.730 – R$ 2.700</td></tr>
+              <tr><td>54 a 58 anos</td><td>R$ 790 – R$ 1.245</td><td>R$ 1.320 – R$ 2.010</td><td>R$ 2.260 – R$ 3.530</td></tr>
+              <tr><td>59 anos ou mais</td><td>R$ 1.125 – R$ 1.770</td><td>R$ 1.880 – R$ 2.860</td><td>R$ 3.210 – R$ 5.020</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="highlight-box" style="margin-top:20px;"><p>⚠️ Valores estimados para 2026. Preço final varia conforme cidade, coparticipação e condições do plano. Solicite cotação exata com a Virtua.</p></div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2 class="cs-title">Carência do Bradesco Saúde</h2>
+        <p class="cs-lead">O Bradesco Saúde segue os prazos máximos estabelecidos pela ANS. Veja os principais:</p>
+        <div style="overflow-x:auto;">
+          <table class="carencia-table">
+            <thead><tr><th>Tipo de Atendimento</th><th>Prazo de Carência</th></tr></thead>
+            <tbody>
+              <tr><td>Urgência e emergência</td><td>24 horas</td></tr>
+              <tr><td>Consultas médicas e exames simples</td><td>30 dias</td></tr>
+              <tr><td>Internações clínicas e cirúrgicas</td><td>180 dias</td></tr>
+              <tr><td>Parto (normal ou cesárea)</td><td>300 dias</td></tr>
+              <tr><td>Doenças preexistentes (CPT)</td><td>24 meses ou cobertura parcial</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="highlight-box"><p>💡 Com a <strong>portabilidade de carências</strong>, quem já tem plano de saúde ativo pode migrar para o Bradesco sem cumprir novas carências. Consulte a Virtua para verificar sua elegibilidade.</p></div>
+      </div>
+    </section>
+
+    <section class="content-section alt">
+      <div class="container">
+        <h2 class="cs-title">Como Contratar Plano de Saúde Bradesco</h2>
+        <p class="cs-lead">Processo simples, 100% digital e sem custo pela Virtua Corretora:</p>
+        <ul class="steps-list">
+          <li><div><h4>Solicite cotação pelo WhatsApp</h4><p>Informe cidade, idade e perfil (individual, familiar ou empresarial) para receber as opções disponíveis.</p></div></li>
+          <li><div><h4>Compare os planos disponíveis</h4><p>Apresentamos as opções do Bradesco Saúde com preços, coberturas, redes credenciadas e comparativo com outras operadoras.</p></div></li>
+          <li><div><h4>Envie os documentos</h4><p>RG, CPF, comprovante de residência e declaração de saúde. Empresas: CNPJ, contrato social e relação de beneficiários.</p></div></li>
+          <li><div><h4>Assinatura digital e ativação</h4><p>Proposta assinada digitalmente. Carteirinha disponível no app Bradesco Saúde após confirmação do pagamento.</p></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2 class="cs-title">Vantagens e Desvantagens do Bradesco Saúde</h2>
+        <div class="pros-cons">
+          <div class="pros"><h4>✅ Vantagens</h4><ul>
+            <li>Acesso ao Albert Einstein e Sírio-Libanês (planos top)</li>
+            <li>Sólida reputação e tradição no mercado</li>
+            <li>Ampla rede nacional em todas as capitais</li>
+            <li>Planos para MEI e PME a partir de 2 vidas</li>
+            <li>Cobertura internacional nos planos premium</li>
+            <li>App Bradesco Saúde completo e intuitivo</li>
+          </ul></div>
+          <div class="cons"><h4>⚠️ Pontos de Atenção</h4><ul>
+            <li>Preço elevado nos planos top</li>
+            <li>Coparticipação nos planos básicos</li>
+            <li>Albert Einstein apenas nos planos mais caros</li>
+            <li>Reajuste anual vinculado à tabela Bradesco</li>
+          </ul></div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- Network -->
     <section class="section network-section">

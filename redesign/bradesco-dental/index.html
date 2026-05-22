@@ -301,6 +301,48 @@
         ]
     }
     </script>
+
+    <style>
+    .content-section { padding: 72px 0; }
+    .content-section.alt { background: #f8fafc; }
+    .content-section .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .cs-title { font-size: clamp(22px, 2.5vw, 30px); font-weight: 800; color: #1e293b; margin: 0 0 12px; }
+    .cs-lead { font-size: 16px; color: #475569; line-height: 1.8; margin: 0 0 32px; }
+    .cs-body { font-size: 15px; color: #374151; line-height: 1.85; }
+    .cs-body p { margin: 0 0 18px; }
+    .cs-body strong { color: #1e293b; }
+    .coverage-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 16px; margin-top: 28px; }
+    .coverage-item { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px 22px; }
+    .coverage-item h4 { font-size: 14px; font-weight: 700; color: #1e293b; margin: 0 0 6px; }
+    .coverage-item p { font-size: 13px; color: #64748b; margin: 0; line-height: 1.6; }
+    .price-table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 14px; }
+    .price-table th { background: #1e40af; color: white; padding: 12px 16px; text-align: left; font-weight: 600; }
+    .price-table td { padding: 11px 16px; border-bottom: 1px solid #e2e8f0; color: #374151; }
+    .price-table tr:nth-child(even) td { background: #f8fafc; }
+    .price-table tr:hover td { background: #eff6ff; }
+    .steps-list { list-style: none; padding: 0; margin: 24px 0 0; counter-reset: steps; }
+    .steps-list li { counter-increment: steps; display: flex; gap: 18px; align-items: flex-start; margin-bottom: 20px; }
+    .steps-list li::before { content: counter(steps); min-width: 36px; height: 36px; border-radius: 50%; background: #1e40af; color: white; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .steps-list li div h4 { font-size: 15px; font-weight: 700; color: #1e293b; margin: 0 0 4px; }
+    .steps-list li div p { font-size: 14px; color: #475569; margin: 0; line-height: 1.6; }
+    .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 28px; }
+    .pros-cons > div { border-radius: 14px; padding: 24px 26px; }
+    .pros { background: #f0fdf4; border: 1px solid #bbf7d0; }
+    .cons { background: #fff7ed; border: 1px solid #fed7aa; }
+    .pros h4 { color: #15803d; font-size: 16px; font-weight: 700; margin: 0 0 14px; }
+    .cons h4 { color: #c2410c; font-size: 16px; font-weight: 700; margin: 0 0 14px; }
+    .pros ul, .cons ul { list-style: none; padding: 0; margin: 0; }
+    .pros li, .cons li { font-size: 14px; padding: 5px 0; padding-left: 22px; position: relative; color: #374151; line-height: 1.5; }
+    .pros li::before { content: "✓"; position: absolute; left: 0; color: #16a34a; font-weight: 700; }
+    .cons li::before { content: "✗"; position: absolute; left: 0; color: #ea580c; font-weight: 700; }
+    .carencia-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px; }
+    .carencia-table th { background: #0f172a; color: white; padding: 11px 16px; text-align: left; font-weight: 600; }
+    .carencia-table td { padding: 10px 16px; border-bottom: 1px solid #e2e8f0; }
+    .carencia-table tr:nth-child(even) td { background: #f8fafc; }
+    .highlight-box { background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 24px 0; }
+    .highlight-box p { margin: 0; font-size: 14px; color: #1e3a8a; line-height: 1.7; }
+    @media(max-width:768px){ .pros-cons { grid-template-columns:1fr; } .price-table { font-size:12px; } }
+    </style>
 </head>
 <body>
     <!-- Top Bar -->
@@ -483,6 +525,77 @@
             </div>
         </div>
     </section>
+
+    <section class="content-section alt">
+      <div class="container">
+        <h2 class="cs-title">Sobre o Bradesco Dental: Líder em Planos Odontológicos no Brasil</h2>
+        <p class="cs-lead">O <strong>Bradesco Dental</strong> é um dos maiores e mais respeitados planos odontológicos do Brasil, parte do <strong>Grupo Bradesco Seguros</strong>. Com uma das maiores redes de dentistas credenciados do país — mais de 30.000 dentistas e 10.000 clínicas —, o Bradesco Dental oferece planos para pessoas físicas, famílias e empresas de todos os portes.</p>
+        <div class="cs-body">
+          <p>A grande vantagem do Bradesco Dental está na <strong>amplitude da rede credenciada</strong>: clínicas odontológicas de qualidade em capitais, interior e regiões de difícil acesso, garantindo que o beneficiário sempre tenha um dentista próximo à sua residência ou trabalho.</p>
+          <p>Os planos vão do básico — com consultas de rotina, profilaxia e restaurações — até o completo, com <strong>ortodontia</strong> (aparelho), <strong>implantes</strong>, <strong>próteses</strong> e <strong>endodontia</strong> (tratamento de canal). O plano <strong>Dental Premium</strong> inclui tratamentos estéticos como clareamento dental.</p>
+          <p>Para empresas, o Bradesco Dental Empresarial é uma das melhores escolhas do mercado, com preços escalonados por número de vidas e programas de saúde bucal corporativa.</p>
+          <div class="highlight-box"><p>💡 <strong>Dica Virtua:</strong> O Bradesco Dental pode ser contratado isoladamente (apenas odonto) ou junto com o plano de saúde Bradesco. A contratação combinada geralmente oferece desconto especial.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2 class="cs-title">O Que o Plano Odontológico Bradesco Cobre?</h2>
+        <div class="coverage-grid">
+          <div class="coverage-item"><h4>🦷 Consultas e Avaliação</h4><p>Consultas de avaliação, triagem e diagnóstico odontológico.</p></div>
+          <div class="coverage-item"><h4>🧹 Prevenção e Profilaxia</h4><p>Limpeza dental (profilaxia), aplicação de flúor, selantes e orientação de higiene bucal.</p></div>
+          <div class="coverage-item"><h4>🔧 Restaurações</h4><p>Restaurações com amálgama e resina composta em todos os dentes.</p></div>
+          <div class="coverage-item"><h4>🦠 Endodontia</h4><p>Tratamento de canal (endodontia) em dentes anteriores, pré-molares e molares.</p></div>
+          <div class="coverage-item"><h4>✂️ Extrações</h4><p>Extrações simples e cirúrgicas, incluindo dentes do siso (sisos).</p></div>
+          <div class="coverage-item"><h4>🦴 Periodontia</h4><p>Tratamento de gengiva, raspagem e alisamento radicular para doença periodontal.</p></div>
+          <div class="coverage-item"><h4>🔩 Implantes (Planos Plus)</h4><p>Implantes dentários cobertos nos planos de maior abrangência do Bradesco Dental.</p></div>
+          <div class="coverage-item"><h4>😁 Ortodontia</h4><p>Aparelho ortodôntico (fixo e removível) coberto nos planos Completo e Premium.</p></div>
+          <div class="coverage-item"><h4>🌟 Próteses</h4><p>Próteses unitárias, parciais e totais conforme o plano contratado.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section alt">
+      <div class="container">
+        <h2 class="cs-title">Tabela de Preços Bradesco Dental 2026</h2>
+        <p class="cs-lead">Os planos Bradesco Dental têm preços acessíveis, especialmente para empresas:</p>
+        <div style="overflow-x:auto;">
+          <table class="price-table">
+            <thead><tr><th>Plano</th><th>Individual</th><th>Empresarial (por vida)</th><th>Cobertura</th></tr></thead>
+            <tbody>
+              <tr><td>Bradesco Dental Essencial</td><td>R$ 35 – R$ 55</td><td>R$ 25 – R$ 40</td><td>Prevenção + restaurações</td></tr>
+              <tr><td>Bradesco Dental Completo</td><td>R$ 60 – R$ 95</td><td>R$ 45 – R$ 70</td><td>+ Endodontia + periodontia</td></tr>
+              <tr><td>Bradesco Dental Premium</td><td>R$ 110 – R$ 170</td><td>R$ 80 – R$ 130</td><td>+ Ortodontia + implantes</td></tr>
+              <tr><td>Bradesco Dental Família</td><td>R$ 120 – R$ 190</td><td>—</td><td>Até 4 dependentes inclusos</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="highlight-box" style="margin-top:20px;"><p>💡 Planos odontológicos têm carência de até <strong>60 dias</strong> para tratamentos básicos e até <strong>180 dias</strong> para ortodontia e implantes. Procedimentos de urgência têm cobertura imediata.</p></div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2 class="cs-title">Vantagens e Desvantagens do Bradesco Dental</h2>
+        <div class="pros-cons">
+          <div class="pros"><h4>✅ Vantagens</h4><ul>
+            <li>Maior rede odontológica do Brasil: 30.000+ dentistas</li>
+            <li>Preços acessíveis, especialmente no plano empresarial</li>
+            <li>Cobertura em todo o território nacional</li>
+            <li>App com localização de dentistas próximos</li>
+            <li>Planos com ortodontia e implantes disponíveis</li>
+            <li>Marca consolidada e de confiança</li>
+          </ul></div>
+          <div class="cons"><h4>⚠️ Pontos de Atenção</h4><ul>
+            <li>Implantes apenas nos planos mais caros</li>
+            <li>Carência de até 180 dias para ortodontia</li>
+            <li>Qualidade varia por dentista credenciado</li>
+          </ul></div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- Network -->
     <section class="section network-section">

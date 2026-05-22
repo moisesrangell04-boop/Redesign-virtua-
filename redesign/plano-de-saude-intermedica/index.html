@@ -308,6 +308,48 @@
         ]
     }
     </script>
+
+    <style>
+    .content-section { padding: 72px 0; }
+    .content-section.alt { background: #f8fafc; }
+    .content-section .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .cs-title { font-size: clamp(22px, 2.5vw, 30px); font-weight: 800; color: #1e293b; margin: 0 0 12px; }
+    .cs-lead { font-size: 16px; color: #475569; line-height: 1.8; margin: 0 0 32px; }
+    .cs-body { font-size: 15px; color: #374151; line-height: 1.85; }
+    .cs-body p { margin: 0 0 18px; }
+    .cs-body strong { color: #1e293b; }
+    .coverage-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 16px; margin-top: 28px; }
+    .coverage-item { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px 22px; }
+    .coverage-item h4 { font-size: 14px; font-weight: 700; color: #1e293b; margin: 0 0 6px; }
+    .coverage-item p { font-size: 13px; color: #64748b; margin: 0; line-height: 1.6; }
+    .price-table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 14px; }
+    .price-table th { background: #1e40af; color: white; padding: 12px 16px; text-align: left; font-weight: 600; }
+    .price-table td { padding: 11px 16px; border-bottom: 1px solid #e2e8f0; color: #374151; }
+    .price-table tr:nth-child(even) td { background: #f8fafc; }
+    .price-table tr:hover td { background: #eff6ff; }
+    .steps-list { list-style: none; padding: 0; margin: 24px 0 0; counter-reset: steps; }
+    .steps-list li { counter-increment: steps; display: flex; gap: 18px; align-items: flex-start; margin-bottom: 20px; }
+    .steps-list li::before { content: counter(steps); min-width: 36px; height: 36px; border-radius: 50%; background: #1e40af; color: white; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .steps-list li div h4 { font-size: 15px; font-weight: 700; color: #1e293b; margin: 0 0 4px; }
+    .steps-list li div p { font-size: 14px; color: #475569; margin: 0; line-height: 1.6; }
+    .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 28px; }
+    .pros-cons > div { border-radius: 14px; padding: 24px 26px; }
+    .pros { background: #f0fdf4; border: 1px solid #bbf7d0; }
+    .cons { background: #fff7ed; border: 1px solid #fed7aa; }
+    .pros h4 { color: #15803d; font-size: 16px; font-weight: 700; margin: 0 0 14px; }
+    .cons h4 { color: #c2410c; font-size: 16px; font-weight: 700; margin: 0 0 14px; }
+    .pros ul, .cons ul { list-style: none; padding: 0; margin: 0; }
+    .pros li, .cons li { font-size: 14px; padding: 5px 0; padding-left: 22px; position: relative; color: #374151; line-height: 1.5; }
+    .pros li::before { content: "✓"; position: absolute; left: 0; color: #16a34a; font-weight: 700; }
+    .cons li::before { content: "✗"; position: absolute; left: 0; color: #ea580c; font-weight: 700; }
+    .carencia-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px; }
+    .carencia-table th { background: #0f172a; color: white; padding: 11px 16px; text-align: left; font-weight: 600; }
+    .carencia-table td { padding: 10px 16px; border-bottom: 1px solid #e2e8f0; }
+    .carencia-table tr:nth-child(even) td { background: #f8fafc; }
+    .highlight-box { background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 24px 0; }
+    .highlight-box p { margin: 0; font-size: 14px; color: #1e3a8a; line-height: 1.7; }
+    @media(max-width:768px){ .pros-cons { grid-template-columns:1fr; } .price-table { font-size:12px; } }
+    </style>
 </head>
 <body>
     <!-- Top Bar -->
@@ -490,6 +532,76 @@
             </div>
         </div>
     </section>
+
+    <section class="content-section alt">
+      <div class="container">
+        <h2 class="cs-title">Sobre a NotreDame Intermédica: Referência em Saúde no Sudeste</h2>
+        <p class="cs-lead">A <strong>NotreDame Intermédica (GNDI)</strong>, hoje parte do grupo <strong>Hapvida NotreDame Intermédica</strong>, é uma das maiores operadoras de saúde do Brasil, com forte presença no <strong>Sudeste do país</strong>. Com décadas de história e mais de 5 milhões de beneficiários, é conhecida pela qualidade da rede e pelo modelo verticalizado de saúde.</p>
+        <div class="cs-body">
+          <p>A Intermédica opera um modelo <strong>verticalmente integrado</strong>, com hospitais próprios, clínicas, centros diagnósticos e farmácias. Seus hospitais em São Paulo — como o <strong>Hospital Maternidade São Luiz</strong> e unidades da rede GNDI — são referências em qualidade assistencial.</p>
+          <p>A linha de produtos oferece desde planos econômicos (<strong>Smart</strong>) com rede própria até planos completos com rede credenciada ampla. O app <strong>GNDI</strong> permite agendamento de consultas, solicitação de reembolso, telemedicina e acesso a resultados de exames.</p>
+          <div class="highlight-box"><p>💡 <strong>Dica Virtua:</strong> A Intermédica GNDI é excelente para quem mora em São Paulo, Rio de Janeiro e Minas Gerais, onde a rede própria é mais densa. Para planos econômicos no Sudeste, é uma das melhores relações custo-benefício.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2 class="cs-title">Cobertura do Plano Intermédica em 2026</h2>
+        <div class="coverage-grid">
+          <div class="coverage-item"><h4>🏥 Hospitais Próprios GNDI</h4><p>Rede hospitalar própria em São Paulo, Rio de Janeiro e principais cidades do Sudeste.</p></div>
+          <div class="coverage-item"><h4>🔬 Diagnóstico por Imagem</h4><p>Tomografia, ressonância, PET-CT, ultrassom e laboratório próprio.</p></div>
+          <div class="coverage-item"><h4>👨‍⚕️ Clínicas Especializadas</h4><p>Clínicas próprias com especialidades médicas em diversas cidades do Sudeste.</p></div>
+          <div class="coverage-item"><h4>🚑 Urgência 24h</h4><p>Pronto-socorro 24 horas nas unidades próprias GNDI.</p></div>
+          <div class="coverage-item"><h4>🎗️ Oncologia</h4><p>Centros oncológicos próprios com tratamento completo de câncer.</p></div>
+          <div class="coverage-item"><h4>👶 Maternidade</h4><p>Maternidades próprias com estrutura completa para pré-natal e parto.</p></div>
+          <div class="coverage-item"><h4>📱 Telemedicina GNDI</h4><p>Consultas online disponíveis pelo app GNDI com especialistas.</p></div>
+          <div class="coverage-item"><h4>💊 Farmácias Parceiras</h4><p>Descontos em medicamentos em farmácias parceiras da rede GNDI.</p></div>
+          <div class="coverage-item"><h4>🧠 Saúde Mental</h4><p>Consultas com psiquiatra e psicólogo, internações em clínicas especializadas.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section alt">
+      <div class="container">
+        <h2 class="cs-title">Tabela de Preços Intermédica 2026</h2>
+        <div style="overflow-x:auto;">
+          <table class="price-table">
+            <thead><tr><th>Faixa Etária</th><th>Smart (Rede Própria)</th><th>Smart Plus</th><th>Nacional</th></tr></thead>
+            <tbody>
+              <tr><td>0 a 18 anos</td><td>R$ 100 – R$ 190</td><td>R$ 180 – R$ 300</td><td>R$ 260 – R$ 400</td></tr>
+              <tr><td>19 a 28 anos</td><td>R$ 110 – R$ 205</td><td>R$ 195 – R$ 320</td><td>R$ 275 – R$ 430</td></tr>
+              <tr><td>29 a 38 anos</td><td>R$ 160 – R$ 295</td><td>R$ 275 – R$ 455</td><td>R$ 390 – R$ 615</td></tr>
+              <tr><td>39 a 48 anos</td><td>R$ 240 – R$ 445</td><td>R$ 415 – R$ 690</td><td>R$ 590 – R$ 930</td></tr>
+              <tr><td>49 a 58 anos</td><td>R$ 425 – R$ 795</td><td>R$ 740 – R$ 1.235</td><td>R$ 1.050 – R$ 1.655</td></tr>
+              <tr><td>59 anos ou mais</td><td>R$ 690 – R$ 1.290</td><td>R$ 1.195 – R$ 1.995</td><td>R$ 1.695 – R$ 2.670</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="highlight-box" style="margin-top:20px;"><p>⚠️ Valores estimados para 2026. Consulte a Virtua para cotação exata no seu CEP.</p></div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2 class="cs-title">Vantagens e Desvantagens da Intermédica</h2>
+        <div class="pros-cons">
+          <div class="pros"><h4>✅ Vantagens</h4><ul>
+            <li>Forte rede própria no Sudeste</li>
+            <li>Preços competitivos nos planos Smart</li>
+            <li>Hospitais maternidade próprios de qualidade</li>
+            <li>App GNDI completo com telemedicina</li>
+            <li>Ágil na autorização de procedimentos</li>
+          </ul></div>
+          <div class="cons"><h4>⚠️ Pontos de Atenção</h4><ul>
+            <li>Rede mais limitada fora do Sudeste</li>
+            <li>Planos básicos com rede própria restrita</li>
+            <li>Menor cobertura nacional que Amil ou Bradesco</li>
+          </ul></div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- Network -->
     <section class="section network-section">

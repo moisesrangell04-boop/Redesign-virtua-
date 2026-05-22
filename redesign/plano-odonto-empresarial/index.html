@@ -294,6 +294,48 @@
         ]
     }
     </script>
+
+    <style>
+    .content-section { padding: 72px 0; }
+    .content-section.alt { background: #f8fafc; }
+    .content-section .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .cs-title { font-size: clamp(22px, 2.5vw, 30px); font-weight: 800; color: #1e293b; margin: 0 0 12px; }
+    .cs-lead { font-size: 16px; color: #475569; line-height: 1.8; margin: 0 0 32px; }
+    .cs-body { font-size: 15px; color: #374151; line-height: 1.85; }
+    .cs-body p { margin: 0 0 18px; }
+    .cs-body strong { color: #1e293b; }
+    .coverage-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 16px; margin-top: 28px; }
+    .coverage-item { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px 22px; }
+    .coverage-item h4 { font-size: 14px; font-weight: 700; color: #1e293b; margin: 0 0 6px; }
+    .coverage-item p { font-size: 13px; color: #64748b; margin: 0; line-height: 1.6; }
+    .price-table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 14px; }
+    .price-table th { background: #1e40af; color: white; padding: 12px 16px; text-align: left; font-weight: 600; }
+    .price-table td { padding: 11px 16px; border-bottom: 1px solid #e2e8f0; color: #374151; }
+    .price-table tr:nth-child(even) td { background: #f8fafc; }
+    .price-table tr:hover td { background: #eff6ff; }
+    .steps-list { list-style: none; padding: 0; margin: 24px 0 0; counter-reset: steps; }
+    .steps-list li { counter-increment: steps; display: flex; gap: 18px; align-items: flex-start; margin-bottom: 20px; }
+    .steps-list li::before { content: counter(steps); min-width: 36px; height: 36px; border-radius: 50%; background: #1e40af; color: white; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .steps-list li div h4 { font-size: 15px; font-weight: 700; color: #1e293b; margin: 0 0 4px; }
+    .steps-list li div p { font-size: 14px; color: #475569; margin: 0; line-height: 1.6; }
+    .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 28px; }
+    .pros-cons > div { border-radius: 14px; padding: 24px 26px; }
+    .pros { background: #f0fdf4; border: 1px solid #bbf7d0; }
+    .cons { background: #fff7ed; border: 1px solid #fed7aa; }
+    .pros h4 { color: #15803d; font-size: 16px; font-weight: 700; margin: 0 0 14px; }
+    .cons h4 { color: #c2410c; font-size: 16px; font-weight: 700; margin: 0 0 14px; }
+    .pros ul, .cons ul { list-style: none; padding: 0; margin: 0; }
+    .pros li, .cons li { font-size: 14px; padding: 5px 0; padding-left: 22px; position: relative; color: #374151; line-height: 1.5; }
+    .pros li::before { content: "✓"; position: absolute; left: 0; color: #16a34a; font-weight: 700; }
+    .cons li::before { content: "✗"; position: absolute; left: 0; color: #ea580c; font-weight: 700; }
+    .carencia-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px; }
+    .carencia-table th { background: #0f172a; color: white; padding: 11px 16px; text-align: left; font-weight: 600; }
+    .carencia-table td { padding: 10px 16px; border-bottom: 1px solid #e2e8f0; }
+    .carencia-table tr:nth-child(even) td { background: #f8fafc; }
+    .highlight-box { background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 24px 0; }
+    .highlight-box p { margin: 0; font-size: 14px; color: #1e3a8a; line-height: 1.7; }
+    @media(max-width:768px){ .pros-cons { grid-template-columns:1fr; } .price-table { font-size:12px; } }
+    </style>
 </head>
 <body>
     <!-- Top Bar -->
@@ -476,6 +518,53 @@
             </div>
         </div>
     </section>
+
+    <section class="content-section alt">
+      <div class="container">
+        <h2 class="cs-title">Por Que Ter Plano Odontológico na Sua Empresa?</h2>
+        <p class="cs-lead">O plano odontológico empresarial é um dos <strong>benefícios mais valorizados pelos funcionários</strong> — e um dos mais baratos para o empregador. Por apenas R$ 25 a R$ 60 por vida, sua empresa oferece um benefício que impacta diretamente a qualidade de vida e a produtividade da equipe.</p>
+        <div class="cs-body">
+          <p>Segundo pesquisas do setor, <strong>72% dos trabalhadores</strong> listam o plano odontológico como um dos três benefícios mais importantes. Empresas que oferecem esse benefício têm menor rotatividade e maior engajamento dos colaboradores.</p>
+          <p>Além disso, a <strong>saúde bucal impacta diretamente a saúde geral</strong>: doenças periodontais estão associadas a diabetes, doenças cardiovasculares e complicações na gravidez. Funcionários com bom acesso ao dentista faltam menos ao trabalho e têm menor incidência de doenças sistêmicas.</p>
+          <p>As principais operadoras de plano odonto empresarial no Brasil são: <strong>OdontoPrev</strong> (maior), <strong>Bradesco Dental</strong>, <strong>Amil Dental</strong>, <strong>SulAmérica Odonto</strong>, <strong>Porto Seguro Odonto</strong> e <strong>MetLife Dental</strong>.</p>
+          <div class="highlight-box"><p>💡 <strong>Dica Virtua:</strong> Para MEI e empresas com até 30 funcionários, os planos Bradesco Dental e OdontoPrev oferecem as melhores condições de custo-benefício. A Virtua negocia diretamente com as operadoras para garantir o melhor preço.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2 class="cs-title">Comparativo de Planos Odontológicos Empresariais 2026</h2>
+        <div style="overflow-x:auto;">
+          <table class="price-table">
+            <thead><tr><th>Operadora</th><th>Preço/vida (mínimo)</th><th>Rede (aprox.)</th><th>Ortodontia</th><th>Implante</th></tr></thead>
+            <tbody>
+              <tr><td>OdontoPrev Essencial</td><td>R$ 20 – R$ 35</td><td>28.000+ dentistas</td><td>Não</td><td>Não</td></tr>
+              <tr><td>OdontoPrev Plus</td><td>R$ 45 – R$ 70</td><td>28.000+ dentistas</td><td>Sim</td><td>Parcial</td></tr>
+              <tr><td>Bradesco Dental Emp.</td><td>R$ 25 – R$ 45</td><td>30.000+ dentistas</td><td>Planos premium</td><td>Planos premium</td></tr>
+              <tr><td>Amil Dental Emp.</td><td>R$ 30 – R$ 50</td><td>20.000+ dentistas</td><td>Planos premium</td><td>Não</td></tr>
+              <tr><td>SulAmérica Odonto</td><td>R$ 28 – R$ 48</td><td>22.000+ dentistas</td><td>Planos premium</td><td>Não</td></tr>
+              <tr><td>Porto Seguro Odonto</td><td>R$ 32 – R$ 55</td><td>18.000+ dentistas</td><td>Planos premium</td><td>Parcial</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="highlight-box" style="margin-top:20px;"><p>⚠️ Valores mínimos para grupos a partir de 2 vidas (MEI). Empresas com mais funcionários têm acesso a tabelas mais vantajosas. Solicite cotação comparativa gratuita.</p></div>
+      </div>
+    </section>
+
+    <section class="content-section alt">
+      <div class="container">
+        <h2 class="cs-title">Como Contratar Plano Odonto Empresarial</h2>
+        <ul class="steps-list">
+          <li><div><h4>Defina o número de vidas</h4><p>MEI: a partir de 1 vida. PME: a partir de 2 vidas. Grandes empresas: sem mínimo definido por operadora.</p></div></li>
+          <li><div><h4>Escolha a cobertura necessária</h4><p>Básico (prevenção + restaurações), Completo (+ endodontia + extração) ou Premium (+ ortodontia + implantes).</p></div></li>
+          <li><div><h4>Solicite cotação comparativa</h4><p>A Virtua compara as principais operadoras e apresenta tabela com preços, coberturas e rede credenciada próxima à sua empresa.</p></div></li>
+          <li><div><h4>Documentação da empresa</h4><p>CNPJ ativo, contrato social, relação de beneficiários (nome, CPF e data de nascimento) e comprovante de endereço.</p></div></li>
+          <li><div><h4>Ativação e carteirinhas</h4><p>Após a assinatura do contrato e pagamento da 1ª mensalidade, as carteirinhas digitais ficam disponíveis em 24–48h.</p></div></li>
+        </ul>
+      </div>
+    </section>
+
 
     <!-- Network -->
     <section class="section network-section">

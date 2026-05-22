@@ -301,6 +301,48 @@
         ]
     }
     </script>
+
+    <style>
+    .content-section { padding: 72px 0; }
+    .content-section.alt { background: #f8fafc; }
+    .content-section .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .cs-title { font-size: clamp(22px, 2.5vw, 30px); font-weight: 800; color: #1e293b; margin: 0 0 12px; }
+    .cs-lead { font-size: 16px; color: #475569; line-height: 1.8; margin: 0 0 32px; }
+    .cs-body { font-size: 15px; color: #374151; line-height: 1.85; }
+    .cs-body p { margin: 0 0 18px; }
+    .cs-body strong { color: #1e293b; }
+    .coverage-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 16px; margin-top: 28px; }
+    .coverage-item { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px 22px; }
+    .coverage-item h4 { font-size: 14px; font-weight: 700; color: #1e293b; margin: 0 0 6px; }
+    .coverage-item p { font-size: 13px; color: #64748b; margin: 0; line-height: 1.6; }
+    .price-table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 14px; }
+    .price-table th { background: #1e40af; color: white; padding: 12px 16px; text-align: left; font-weight: 600; }
+    .price-table td { padding: 11px 16px; border-bottom: 1px solid #e2e8f0; color: #374151; }
+    .price-table tr:nth-child(even) td { background: #f8fafc; }
+    .price-table tr:hover td { background: #eff6ff; }
+    .steps-list { list-style: none; padding: 0; margin: 24px 0 0; counter-reset: steps; }
+    .steps-list li { counter-increment: steps; display: flex; gap: 18px; align-items: flex-start; margin-bottom: 20px; }
+    .steps-list li::before { content: counter(steps); min-width: 36px; height: 36px; border-radius: 50%; background: #1e40af; color: white; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .steps-list li div h4 { font-size: 15px; font-weight: 700; color: #1e293b; margin: 0 0 4px; }
+    .steps-list li div p { font-size: 14px; color: #475569; margin: 0; line-height: 1.6; }
+    .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 28px; }
+    .pros-cons > div { border-radius: 14px; padding: 24px 26px; }
+    .pros { background: #f0fdf4; border: 1px solid #bbf7d0; }
+    .cons { background: #fff7ed; border: 1px solid #fed7aa; }
+    .pros h4 { color: #15803d; font-size: 16px; font-weight: 700; margin: 0 0 14px; }
+    .cons h4 { color: #c2410c; font-size: 16px; font-weight: 700; margin: 0 0 14px; }
+    .pros ul, .cons ul { list-style: none; padding: 0; margin: 0; }
+    .pros li, .cons li { font-size: 14px; padding: 5px 0; padding-left: 22px; position: relative; color: #374151; line-height: 1.5; }
+    .pros li::before { content: "✓"; position: absolute; left: 0; color: #16a34a; font-weight: 700; }
+    .cons li::before { content: "✗"; position: absolute; left: 0; color: #ea580c; font-weight: 700; }
+    .carencia-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px; }
+    .carencia-table th { background: #0f172a; color: white; padding: 11px 16px; text-align: left; font-weight: 600; }
+    .carencia-table td { padding: 10px 16px; border-bottom: 1px solid #e2e8f0; }
+    .carencia-table tr:nth-child(even) td { background: #f8fafc; }
+    .highlight-box { background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 24px 0; }
+    .highlight-box p { margin: 0; font-size: 14px; color: #1e3a8a; line-height: 1.7; }
+    @media(max-width:768px){ .pros-cons { grid-template-columns:1fr; } .price-table { font-size:12px; } }
+    </style>
 </head>
 <body>
     <!-- Top Bar -->
@@ -483,6 +525,79 @@
             </div>
         </div>
     </section>
+
+    <section class="content-section alt">
+      <div class="container">
+        <h2 class="cs-title">Sobre a Unimed: A Maior Cooperativa Médica do Mundo</h2>
+        <p class="cs-lead">A <strong>Unimed</strong> é o maior sistema cooperativista de saúde do mundo, presente em mais de <strong>83% dos municípios brasileiros</strong> com 360+ cooperativas independentes. Fundada em 1967 em Santos (SP), hoje atende mais de 18 milhões de beneficiários em todo o Brasil.</p>
+        <div class="cs-body">
+          <p>O diferencial da Unimed está nos <strong>médicos cooperados</strong>: são os próprios médicos que gerem a cooperativa, garantindo alinhamento entre qualidade assistencial e sustentabilidade financeira. Isso se traduz em atendimento humanizado e vínculos de longo prazo com os beneficiários.</p>
+          <p>O sistema de <strong>intercâmbio Unimed</strong> permite que beneficiários de uma cooperativa utilizem a rede de qualquer outra cooperativa Unimed no Brasil, ideal para quem viaja ou estuda em outra cidade. Em emergências, o atendimento é garantido em qualquer unidade Unimed do país.</p>
+          <p>Para empresas, a Unimed oferece planos coletivos empresariais com gestão de saúde populacional, programas de prevenção e excelente custo-benefício. A Unimed é a operadora mais contratada por pequenas e médias empresas em muitas regiões do Brasil.</p>
+          <div class="highlight-box"><p>💡 <strong>Dica Virtua:</strong> A Unimed é ideal para quem valoriza relacionamento com o médico de confiança e atendimento humanizado. Se há uma cooperativa Unimed na sua cidade, é sempre uma das melhores opções a considerar.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2 class="cs-title">Cobertura do Plano Unimed em 2026</h2>
+        <div class="coverage-grid">
+          <div class="coverage-item"><h4>👨‍⚕️ Médicos Cooperados</h4><p>Acesso à rede de médicos cooperados com atendimento personalizado e continuidade de cuidado.</p></div>
+          <div class="coverage-item"><h4>🏥 Hospitais e Clínicas</h4><p>Rede hospitalar própria e credenciada com unidades em todo o Brasil.</p></div>
+          <div class="coverage-item"><h4>🔄 Intercâmbio Nacional</h4><p>Utilize a rede de qualquer cooperativa Unimed no Brasil quando estiver viajando.</p></div>
+          <div class="coverage-item"><h4>🔬 Exames Diagnósticos</h4><p>Tomografia, ressonância, raio-X, ultrassom, endoscopia e mais de 3.000 procedimentos.</p></div>
+          <div class="coverage-item"><h4>🎗️ Oncologia</h4><p>Tratamento completo de câncer conforme rol ANS: quimio, radio, cirurgia e medicamentos.</p></div>
+          <div class="coverage-item"><h4>👶 Maternidade</h4><p>Pré-natal, parto e acompanhamento neonatal completo.</p></div>
+          <div class="coverage-item"><h4>🧠 Saúde Mental</h4><p>Psiquiatria, psicologia e internações em saúde mental.</p></div>
+          <div class="coverage-item"><h4>📱 Unimed Digital</h4><p>App Unimed com carteirinha digital, agendamentos e telemedicina.</p></div>
+          <div class="coverage-item"><h4>🏃 Programas de Prevenção</h4><p>Programas de saúde preventiva, check-up e acompanhamento de doenças crônicas.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section alt">
+      <div class="container">
+        <h2 class="cs-title">Tabela de Preços Unimed 2026</h2>
+        <p class="cs-lead">Os preços da Unimed variam por cooperativa regional. Estimativas médias para planos individuais:</p>
+        <div style="overflow-x:auto;">
+          <table class="price-table">
+            <thead><tr><th>Faixa Etária</th><th>Unimed Enfermaria</th><th>Unimed Apartamento</th><th>Unimed Nacional</th></tr></thead>
+            <tbody>
+              <tr><td>0 a 18 anos</td><td>R$ 160 – R$ 280</td><td>R$ 220 – R$ 380</td><td>R$ 300 – R$ 480</td></tr>
+              <tr><td>19 a 28 anos</td><td>R$ 180 – R$ 300</td><td>R$ 240 – R$ 410</td><td>R$ 320 – R$ 510</td></tr>
+              <tr><td>29 a 38 anos</td><td>R$ 250 – R$ 420</td><td>R$ 330 – R$ 560</td><td>R$ 440 – R$ 700</td></tr>
+              <tr><td>39 a 48 anos</td><td>R$ 380 – R$ 640</td><td>R$ 500 – R$ 840</td><td>R$ 660 – R$ 1.060</td></tr>
+              <tr><td>49 a 58 anos</td><td>R$ 680 – R$ 1.140</td><td>R$ 900 – R$ 1.510</td><td>R$ 1.190 – R$ 1.900</td></tr>
+              <tr><td>59 anos ou mais</td><td>R$ 1.100 – R$ 1.840</td><td>R$ 1.450 – R$ 2.430</td><td>R$ 1.920 – R$ 3.070</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="highlight-box" style="margin-top:20px;"><p>⚠️ Preços variam significativamente entre cooperativas regionais. Solicite cotação para sua cidade com a Virtua.</p></div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2 class="cs-title">Vantagens e Desvantagens da Unimed</h2>
+        <div class="pros-cons">
+          <div class="pros"><h4>✅ Vantagens</h4><ul>
+            <li>Maior sistema cooperativista de saúde do mundo</li>
+            <li>Médicos cooperados: atendimento humanizado</li>
+            <li>Intercâmbio em todo o Brasil (360+ cooperativas)</li>
+            <li>Presente em 83% dos municípios brasileiros</li>
+            <li>Forte presença no interior do país</li>
+            <li>Programas robustos de prevenção</li>
+          </ul></div>
+          <div class="cons"><h4>⚠️ Pontos de Atenção</h4><ul>
+            <li>Cada cooperativa tem autonomia: qualidade varia por região</li>
+            <li>Rede menor em algumas capitais vs. Amil ou Bradesco</li>
+            <li>Processo de autorização pode ser mais lento em algumas cooperativas</li>
+          </ul></div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- Network -->
     <section class="section network-section">

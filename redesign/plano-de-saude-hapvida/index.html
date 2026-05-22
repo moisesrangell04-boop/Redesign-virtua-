@@ -308,6 +308,48 @@
         ]
     }
     </script>
+
+    <style>
+    .content-section { padding: 72px 0; }
+    .content-section.alt { background: #f8fafc; }
+    .content-section .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .cs-title { font-size: clamp(22px, 2.5vw, 30px); font-weight: 800; color: #1e293b; margin: 0 0 12px; }
+    .cs-lead { font-size: 16px; color: #475569; line-height: 1.8; margin: 0 0 32px; }
+    .cs-body { font-size: 15px; color: #374151; line-height: 1.85; }
+    .cs-body p { margin: 0 0 18px; }
+    .cs-body strong { color: #1e293b; }
+    .coverage-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 16px; margin-top: 28px; }
+    .coverage-item { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px 22px; }
+    .coverage-item h4 { font-size: 14px; font-weight: 700; color: #1e293b; margin: 0 0 6px; }
+    .coverage-item p { font-size: 13px; color: #64748b; margin: 0; line-height: 1.6; }
+    .price-table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 14px; }
+    .price-table th { background: #1e40af; color: white; padding: 12px 16px; text-align: left; font-weight: 600; }
+    .price-table td { padding: 11px 16px; border-bottom: 1px solid #e2e8f0; color: #374151; }
+    .price-table tr:nth-child(even) td { background: #f8fafc; }
+    .price-table tr:hover td { background: #eff6ff; }
+    .steps-list { list-style: none; padding: 0; margin: 24px 0 0; counter-reset: steps; }
+    .steps-list li { counter-increment: steps; display: flex; gap: 18px; align-items: flex-start; margin-bottom: 20px; }
+    .steps-list li::before { content: counter(steps); min-width: 36px; height: 36px; border-radius: 50%; background: #1e40af; color: white; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .steps-list li div h4 { font-size: 15px; font-weight: 700; color: #1e293b; margin: 0 0 4px; }
+    .steps-list li div p { font-size: 14px; color: #475569; margin: 0; line-height: 1.6; }
+    .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 28px; }
+    .pros-cons > div { border-radius: 14px; padding: 24px 26px; }
+    .pros { background: #f0fdf4; border: 1px solid #bbf7d0; }
+    .cons { background: #fff7ed; border: 1px solid #fed7aa; }
+    .pros h4 { color: #15803d; font-size: 16px; font-weight: 700; margin: 0 0 14px; }
+    .cons h4 { color: #c2410c; font-size: 16px; font-weight: 700; margin: 0 0 14px; }
+    .pros ul, .cons ul { list-style: none; padding: 0; margin: 0; }
+    .pros li, .cons li { font-size: 14px; padding: 5px 0; padding-left: 22px; position: relative; color: #374151; line-height: 1.5; }
+    .pros li::before { content: "✓"; position: absolute; left: 0; color: #16a34a; font-weight: 700; }
+    .cons li::before { content: "✗"; position: absolute; left: 0; color: #ea580c; font-weight: 700; }
+    .carencia-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px; }
+    .carencia-table th { background: #0f172a; color: white; padding: 11px 16px; text-align: left; font-weight: 600; }
+    .carencia-table td { padding: 10px 16px; border-bottom: 1px solid #e2e8f0; }
+    .carencia-table tr:nth-child(even) td { background: #f8fafc; }
+    .highlight-box { background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 24px 0; }
+    .highlight-box p { margin: 0; font-size: 14px; color: #1e3a8a; line-height: 1.7; }
+    @media(max-width:768px){ .pros-cons { grid-template-columns:1fr; } .price-table { font-size:12px; } }
+    </style>
 </head>
 <body>
     <!-- Top Bar -->
@@ -490,6 +532,80 @@
             </div>
         </div>
     </section>
+
+    <section class="content-section alt">
+      <div class="container">
+        <h2 class="cs-title">Sobre a Hapvida: Maior Operadora de Rede Própria do Brasil</h2>
+        <p class="cs-lead">A <strong>Hapvida NotreDame Intermédica (GNDI)</strong> é hoje a maior operadora de saúde do Brasil em número de beneficiários, resultado da fusão entre Hapvida e NotreDame Intermédica em 2022. Com mais de 15 milhões de beneficiários e uma vasta rede própria, a Hapvida se destaca pelo modelo verticalizado de saúde.</p>
+        <div class="cs-body">
+          <p>O grande diferencial da Hapvida é a <strong>rede própria de hospitais, clínicas, laboratórios e centros diagnósticos</strong>. Com mais de 80 hospitais próprios, 300+ clínicas e 100+ centros de diagnóstico, a operadora controla toda a cadeia de atendimento, o que resulta em <strong>preços mais acessíveis</strong> e agilidade na autorização de procedimentos.</p>
+          <p>Forte especialmente no <strong>Norte e Nordeste do Brasil</strong>, a Hapvida tem presença consolidada em estados como Ceará, Pernambuco, Bahia, Amazonas, Pará e Goiás. Nos últimos anos, expandiu significativamente para o Sudeste com a incorporação da NotreDame Intermédica.</p>
+          <p>Para empresas, o modelo Hapvida oferece planos com <strong>excelente custo-benefício</strong>, especialmente para grupos com base no Norte e Nordeste. Os planos Hapvida Mix combinam rede própria com rede credenciada para maior flexibilidade.</p>
+          <div class="highlight-box"><p>💡 <strong>Dica Virtua:</strong> A Hapvida é a melhor opção de custo-benefício para quem mora no Norte e Nordeste do Brasil. No Sudeste, os planos Hapvida GNDI oferecem boa cobertura com preços competitivos.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2 class="cs-title">Cobertura do Plano Hapvida em 2026</h2>
+        <div class="coverage-grid">
+          <div class="coverage-item"><h4>🏥 Hospitais Próprios</h4><p>Mais de 80 hospitais próprios em todo o Brasil, com foco no Norte e Nordeste.</p></div>
+          <div class="coverage-item"><h4>🔬 Centros Diagnósticos</h4><p>Mais de 100 centros diagnósticos próprios com exames de imagem e laboratório.</p></div>
+          <div class="coverage-item"><h4>👨‍⚕️ Clínicas Próprias</h4><p>Mais de 300 clínicas próprias com consultas em diversas especialidades médicas.</p></div>
+          <div class="coverage-item"><h4>🚑 Pronto-Socorro 24h</h4><p>Atendimento de urgência e emergência nas unidades próprias Hapvida 24 horas.</p></div>
+          <div class="coverage-item"><h4>🎗️ Oncologia</h4><p>Tratamento oncológico completo na rede própria Hapvida com quimioterapia e radioterapia.</p></div>
+          <div class="coverage-item"><h4>👶 Maternidade</h4><p>Pré-natal, parto e UTI neonatal nos hospitais maternidade Hapvida.</p></div>
+          <div class="coverage-item"><h4>📱 Telemedicina</h4><p>Consultas online pelo app Hapvida com médicos disponíveis 24h por dia.</p></div>
+          <div class="coverage-item"><h4>🧠 Saúde Mental</h4><p>Psiquiatria e psicologia na rede própria com agendamento pelo app.</p></div>
+          <div class="coverage-item"><h4>💊 Farmácias Parceiras</h4><p>Descontos em medicamentos em farmácias parceiras da rede Hapvida.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section alt">
+      <div class="container">
+        <h2 class="cs-title">Tabela de Preços Hapvida 2026</h2>
+        <p class="cs-lead">A Hapvida oferece alguns dos preços mais competitivos do mercado, especialmente no Norte e Nordeste:</p>
+        <div style="overflow-x:auto;">
+          <table class="price-table">
+            <thead><tr><th>Faixa Etária</th><th>Hapvida Essencial</th><th>Hapvida Mix</th><th>Hapvida Nacional</th></tr></thead>
+            <tbody>
+              <tr><td>0 a 18 anos</td><td>R$ 80 – R$ 160</td><td>R$ 140 – R$ 240</td><td>R$ 200 – R$ 320</td></tr>
+              <tr><td>19 a 28 anos</td><td>R$ 90 – R$ 175</td><td>R$ 155 – R$ 260</td><td>R$ 215 – R$ 345</td></tr>
+              <tr><td>29 a 38 anos</td><td>R$ 130 – R$ 250</td><td>R$ 220 – R$ 370</td><td>R$ 305 – R$ 490</td></tr>
+              <tr><td>39 a 48 anos</td><td>R$ 195 – R$ 380</td><td>R$ 335 – R$ 560</td><td>R$ 460 – R$ 740</td></tr>
+              <tr><td>49 a 58 anos</td><td>R$ 345 – R$ 680</td><td>R$ 595 – R$ 1.000</td><td>R$ 820 – R$ 1.320</td></tr>
+              <tr><td>59 anos ou mais</td><td>R$ 560 – R$ 1.100</td><td>R$ 960 – R$ 1.610</td><td>R$ 1.320 – R$ 2.130</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="highlight-box" style="margin-top:20px;"><p>⚠️ Valores variam por cidade e estado. A Hapvida tem preços mais baixos no Norte/Nordeste e mais elevados no Sudeste. Consulte a Virtua para cotação exata.</p></div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2 class="cs-title">Vantagens e Desvantagens da Hapvida</h2>
+        <div class="pros-cons">
+          <div class="pros"><h4>✅ Vantagens</h4><ul>
+            <li>Preços mais competitivos do mercado</li>
+            <li>Rede própria: sem necessidade de autorização prévia</li>
+            <li>Mais de 80 hospitais próprios no Brasil</li>
+            <li>Agilidade na autorização de procedimentos</li>
+            <li>Líder em beneficiários no Brasil</li>
+            <li>Forte no Norte e Nordeste</li>
+          </ul></div>
+          <div class="cons"><h4>⚠️ Pontos de Atenção</h4><ul>
+            <li>Rede credenciada menor que Amil ou Bradesco</li>
+            <li>Rede mais limitada no Sudeste e Sul</li>
+            <li>Cobertura restrita à rede própria nos planos básicos</li>
+            <li>Menor acesso a hospitais privados de alto padrão</li>
+          </ul></div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- Network -->
     <section class="section network-section">

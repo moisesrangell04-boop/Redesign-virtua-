@@ -287,6 +287,48 @@
         ]
     }
     </script>
+
+    <style>
+    .content-section { padding: 72px 0; }
+    .content-section.alt { background: #f8fafc; }
+    .content-section .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .cs-title { font-size: clamp(22px, 2.5vw, 30px); font-weight: 800; color: #1e293b; margin: 0 0 12px; }
+    .cs-lead { font-size: 16px; color: #475569; line-height: 1.8; margin: 0 0 32px; }
+    .cs-body { font-size: 15px; color: #374151; line-height: 1.85; }
+    .cs-body p { margin: 0 0 18px; }
+    .cs-body strong { color: #1e293b; }
+    .coverage-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 16px; margin-top: 28px; }
+    .coverage-item { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px 22px; }
+    .coverage-item h4 { font-size: 14px; font-weight: 700; color: #1e293b; margin: 0 0 6px; }
+    .coverage-item p { font-size: 13px; color: #64748b; margin: 0; line-height: 1.6; }
+    .price-table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 14px; }
+    .price-table th { background: #1e40af; color: white; padding: 12px 16px; text-align: left; font-weight: 600; }
+    .price-table td { padding: 11px 16px; border-bottom: 1px solid #e2e8f0; color: #374151; }
+    .price-table tr:nth-child(even) td { background: #f8fafc; }
+    .price-table tr:hover td { background: #eff6ff; }
+    .steps-list { list-style: none; padding: 0; margin: 24px 0 0; counter-reset: steps; }
+    .steps-list li { counter-increment: steps; display: flex; gap: 18px; align-items: flex-start; margin-bottom: 20px; }
+    .steps-list li::before { content: counter(steps); min-width: 36px; height: 36px; border-radius: 50%; background: #1e40af; color: white; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .steps-list li div h4 { font-size: 15px; font-weight: 700; color: #1e293b; margin: 0 0 4px; }
+    .steps-list li div p { font-size: 14px; color: #475569; margin: 0; line-height: 1.6; }
+    .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 28px; }
+    .pros-cons > div { border-radius: 14px; padding: 24px 26px; }
+    .pros { background: #f0fdf4; border: 1px solid #bbf7d0; }
+    .cons { background: #fff7ed; border: 1px solid #fed7aa; }
+    .pros h4 { color: #15803d; font-size: 16px; font-weight: 700; margin: 0 0 14px; }
+    .cons h4 { color: #c2410c; font-size: 16px; font-weight: 700; margin: 0 0 14px; }
+    .pros ul, .cons ul { list-style: none; padding: 0; margin: 0; }
+    .pros li, .cons li { font-size: 14px; padding: 5px 0; padding-left: 22px; position: relative; color: #374151; line-height: 1.5; }
+    .pros li::before { content: "✓"; position: absolute; left: 0; color: #16a34a; font-weight: 700; }
+    .cons li::before { content: "✗"; position: absolute; left: 0; color: #ea580c; font-weight: 700; }
+    .carencia-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px; }
+    .carencia-table th { background: #0f172a; color: white; padding: 11px 16px; text-align: left; font-weight: 600; }
+    .carencia-table td { padding: 10px 16px; border-bottom: 1px solid #e2e8f0; }
+    .carencia-table tr:nth-child(even) td { background: #f8fafc; }
+    .highlight-box { background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 24px 0; }
+    .highlight-box p { margin: 0; font-size: 14px; color: #1e3a8a; line-height: 1.7; }
+    @media(max-width:768px){ .pros-cons { grid-template-columns:1fr; } .price-table { font-size:12px; } }
+    </style>
 </head>
 <body>
     <!-- Top Bar -->
@@ -469,6 +511,62 @@
             </div>
         </div>
     </section>
+
+    <section class="content-section alt">
+      <div class="container">
+        <h2 class="cs-title">Como Funciona o Reembolso Amil: Guia Completo 2026</h2>
+        <p class="cs-lead">O <strong>reembolso Amil</strong> permite que o beneficiário seja atendido por médico, clínica ou hospital fora da rede credenciada e depois solicite o reembolso das despesas à operadora. Nem todos os planos Amil têm essa modalidade — ela está disponível principalmente nos planos <strong>Amil 400</strong>, <strong>Amil 500</strong> e <strong>Amil 750</strong>.</p>
+        <div class="cs-body">
+          <p>O valor do reembolso é calculado com base na <strong>tabela de honorários Amil</strong>, que pode ser diferente do valor cobrado pelo prestador. Em geral, o reembolso cobre entre <strong>60% e 100%</strong> do valor da tabela Amil, dependendo do plano contratado.</p>
+          <p>É importante entender que o reembolso <strong>não é igual ao valor da conta</strong>: se seu médico cobrou R$ 500 por uma consulta e a tabela Amil prevê R$ 200, o reembolso será baseado nos R$ 200. Por isso, é fundamental verificar os valores da tabela antes de usar o reembolso.</p>
+          <div class="highlight-box"><p>💡 <strong>Dica Virtua:</strong> Antes de realizar um atendimento fora da rede, verifique no app Amil qual é o valor de reembolso previsto para aquele procedimento. Isso evita surpresas na hora do ressarcimento.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2 class="cs-title">Passo a Passo: Como Solicitar Reembolso Amil</h2>
+        <ul class="steps-list">
+          <li><div><h4>Realize o atendimento e guarde os documentos</h4><p>Nota fiscal ou recibo do prestador, comprovante de pagamento e relatório/receituário médico com CRM do profissional.</p></div></li>
+          <li><div><h4>Acesse o app Amil ou portal web</h4><p>Faça login no app Amil (disponível para iOS e Android) ou acesse amil.com.br/beneficiario. Selecione "Solicitar Reembolso".</p></div></li>
+          <li><div><h4>Preencha o formulário de reembolso</h4><p>Informe o tipo de atendimento, data, prestador, valor pago e dados bancários para depósito do reembolso.</p></div></li>
+          <li><div><h4>Anexe os documentos digitalizados</h4><p>Escaneie ou fotografe a nota fiscal, recibo e prescrição médica. Os documentos devem estar legíveis.</p></div></li>
+          <li><div><h4>Acompanhe a análise</h4><p>A Amil tem até <strong>30 dias úteis</strong> para analisar e efetuar o pagamento do reembolso aprovado.</p></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section alt">
+      <div class="container">
+        <h2 class="cs-title">Prazos e Valores do Reembolso Amil</h2>
+        <div style="overflow-x:auto;">
+          <table class="price-table">
+            <thead><tr><th>Tipo de Atendimento</th><th>Prazo para Solicitar</th><th>Prazo para Pagamento</th></tr></thead>
+            <tbody>
+              <tr><td>Consultas médicas</td><td>Até 90 dias após o atendimento</td><td>Até 30 dias úteis</td></tr>
+              <tr><td>Exames e diagnósticos</td><td>Até 90 dias após o atendimento</td><td>Até 30 dias úteis</td></tr>
+              <tr><td>Internações hospitalares</td><td>Até 90 dias após a alta</td><td>Até 30 dias úteis</td></tr>
+              <tr><td>Procedimentos ambulatoriais</td><td>Até 90 dias após o atendimento</td><td>Até 30 dias úteis</td></tr>
+              <tr><td>Urgência e emergência</td><td>Até 90 dias após o atendimento</td><td>Até 30 dias úteis</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="highlight-box" style="margin-top:20px;"><p>⚠️ A Amil pode solicitar documentos adicionais durante a análise. Guarde todos os comprovantes de atendimento por pelo menos 6 meses.</p></div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2 class="cs-title">Reembolso Amil Negado: O Que Fazer?</h2>
+        <div class="cs-body">
+          <p>Se o reembolso foi negado, você tem direito a <strong>recurso</strong>. O primeiro passo é entender o motivo da negativa — normalmente comunicado por e-mail ou pelo app. As razões mais comuns são: documentação incompleta, procedimento não coberto pelo plano, ou valor acima da tabela Amil.</p>
+          <p>Para recorrer: acesse o portal Amil e solicite revisão, apresentando a documentação complementar. Caso a negativa persista, você pode registrar uma reclamação na <strong>ANS</strong> (Agência Nacional de Saúde Suplementar) pelo site ans.gov.br ou pelo telefone <strong>0800 701 9656</strong>.</p>
+          <p>A Virtua Corretora orienta nossos clientes em todo o processo de reembolso e recursos. Se você contratou seu plano Amil conosco, conte com nosso suporte pós-venda.</p>
+        </div>
+      </div>
+    </section>
+
 
     <!-- Network -->
     <section class="section network-section">

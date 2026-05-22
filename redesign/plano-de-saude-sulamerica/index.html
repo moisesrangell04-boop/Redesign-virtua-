@@ -308,6 +308,48 @@
         ]
     }
     </script>
+
+    <style>
+    .content-section { padding: 72px 0; }
+    .content-section.alt { background: #f8fafc; }
+    .content-section .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .cs-title { font-size: clamp(22px, 2.5vw, 30px); font-weight: 800; color: #1e293b; margin: 0 0 12px; }
+    .cs-lead { font-size: 16px; color: #475569; line-height: 1.8; margin: 0 0 32px; }
+    .cs-body { font-size: 15px; color: #374151; line-height: 1.85; }
+    .cs-body p { margin: 0 0 18px; }
+    .cs-body strong { color: #1e293b; }
+    .coverage-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 16px; margin-top: 28px; }
+    .coverage-item { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px 22px; }
+    .coverage-item h4 { font-size: 14px; font-weight: 700; color: #1e293b; margin: 0 0 6px; }
+    .coverage-item p { font-size: 13px; color: #64748b; margin: 0; line-height: 1.6; }
+    .price-table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 14px; }
+    .price-table th { background: #1e40af; color: white; padding: 12px 16px; text-align: left; font-weight: 600; }
+    .price-table td { padding: 11px 16px; border-bottom: 1px solid #e2e8f0; color: #374151; }
+    .price-table tr:nth-child(even) td { background: #f8fafc; }
+    .price-table tr:hover td { background: #eff6ff; }
+    .steps-list { list-style: none; padding: 0; margin: 24px 0 0; counter-reset: steps; }
+    .steps-list li { counter-increment: steps; display: flex; gap: 18px; align-items: flex-start; margin-bottom: 20px; }
+    .steps-list li::before { content: counter(steps); min-width: 36px; height: 36px; border-radius: 50%; background: #1e40af; color: white; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .steps-list li div h4 { font-size: 15px; font-weight: 700; color: #1e293b; margin: 0 0 4px; }
+    .steps-list li div p { font-size: 14px; color: #475569; margin: 0; line-height: 1.6; }
+    .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 28px; }
+    .pros-cons > div { border-radius: 14px; padding: 24px 26px; }
+    .pros { background: #f0fdf4; border: 1px solid #bbf7d0; }
+    .cons { background: #fff7ed; border: 1px solid #fed7aa; }
+    .pros h4 { color: #15803d; font-size: 16px; font-weight: 700; margin: 0 0 14px; }
+    .cons h4 { color: #c2410c; font-size: 16px; font-weight: 700; margin: 0 0 14px; }
+    .pros ul, .cons ul { list-style: none; padding: 0; margin: 0; }
+    .pros li, .cons li { font-size: 14px; padding: 5px 0; padding-left: 22px; position: relative; color: #374151; line-height: 1.5; }
+    .pros li::before { content: "✓"; position: absolute; left: 0; color: #16a34a; font-weight: 700; }
+    .cons li::before { content: "✗"; position: absolute; left: 0; color: #ea580c; font-weight: 700; }
+    .carencia-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px; }
+    .carencia-table th { background: #0f172a; color: white; padding: 11px 16px; text-align: left; font-weight: 600; }
+    .carencia-table td { padding: 10px 16px; border-bottom: 1px solid #e2e8f0; }
+    .carencia-table tr:nth-child(even) td { background: #f8fafc; }
+    .highlight-box { background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 24px 0; }
+    .highlight-box p { margin: 0; font-size: 14px; color: #1e3a8a; line-height: 1.7; }
+    @media(max-width:768px){ .pros-cons { grid-template-columns:1fr; } .price-table { font-size:12px; } }
+    </style>
 </head>
 <body>
     <!-- Top Bar -->
@@ -490,6 +532,79 @@
             </div>
         </div>
     </section>
+
+    <section class="content-section alt">
+      <div class="container">
+        <h2 class="cs-title">Sobre a SulAmérica Saúde: Inovação e Cobertura Nacional</h2>
+        <p class="cs-lead">A <strong>SulAmérica Saúde</strong> é uma das maiores operadoras de saúde do Brasil, parte do <strong>Grupo Caixa Seguradora</strong> desde 2022. Com mais de 125 anos de história no mercado de seguros, a SulAmérica atende milhões de beneficiários com planos individuais, familiares e empresariais em todo o país.</p>
+        <div class="cs-body">
+          <p>Reconhecida pela <strong>inovação digital</strong>, a SulAmérica oferece o aplicativo <strong>Saúde SulAmérica</strong>, com telemedicina, agendamentos, carteirinha digital e gestão completa do plano. O programa <strong>Saúde em Dia</strong> promove prevenção e bem-estar com descontos em academias, farmácias e exames preventivos.</p>
+          <p>A linha <strong>SulAmérica Saúde Direto</strong> é uma das mais procuradas por oferecer planos individuais e familiares com boa relação custo-benefício e cobertura em todo o Brasil. Já os planos <strong>SulAmérica Especial</strong> e <strong>SulAmérica Executivo</strong> oferecem coberturas premium com reembolso diferenciado e livre escolha de médico.</p>
+          <p>Para empresas, a SulAmérica tem soluções para todos os portes: de MEI (a partir de 1 vida) a grandes corporações, com gestão de saúde populacional e programas de RH integrados.</p>
+          <div class="highlight-box"><p>💡 <strong>Dica Virtua:</strong> A SulAmérica Saúde Direto é excelente para quem busca plano individual ou familiar com preço competitivo e cobertura nacional. Ideal para trabalhadores autônomos, MEI e profissionais liberais.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2 class="cs-title">Cobertura do Plano SulAmérica em 2026</h2>
+        <div class="coverage-grid">
+          <div class="coverage-item"><h4>🏥 Internações</h4><p>Internações clínicas, cirúrgicas e em UTI, em enfermaria ou apartamento conforme o plano.</p></div>
+          <div class="coverage-item"><h4>🔬 Diagnóstico por Imagem</h4><p>Tomografia, ressonância magnética, ultrassom, raio-X e medicina nuclear.</p></div>
+          <div class="coverage-item"><h4>👨‍⚕️ Consultas e Especialistas</h4><p>Acesso a médicos especialistas em toda a rede credenciada nacional.</p></div>
+          <div class="coverage-item"><h4>🏃 Fisioterapia</h4><p>Sessões de fisioterapia ambulatorial prescritas por médico credenciado.</p></div>
+          <div class="coverage-item"><h4>🎗️ Oncologia</h4><p>Tratamento oncológico completo: quimioterapia, radioterapia e procedimentos cirúrgicos.</p></div>
+          <div class="coverage-item"><h4>🧠 Saúde Mental</h4><p>Consultas psiquiátricas, psicoterapia e internações em saúde mental.</p></div>
+          <div class="coverage-item"><h4>👶 Maternidade</h4><p>Pré-natal, parto e UTI neonatal, com acompanhamento do recém-nascido.</p></div>
+          <div class="coverage-item"><h4>💊 Reembolso</h4><p>Planos com reembolso permitem atendimento fora da rede com ressarcimento conforme tabela.</p></div>
+          <div class="coverage-item"><h4>📱 Telemedicina</h4><p>Consultas online pelo app Saúde SulAmérica disponíveis 24 horas por dia.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section alt">
+      <div class="container">
+        <h2 class="cs-title">Tabela de Preços SulAmérica 2026</h2>
+        <p class="cs-lead">Estimativas de valores para planos individuais SulAmérica por faixa etária:</p>
+        <div style="overflow-x:auto;">
+          <table class="price-table">
+            <thead><tr><th>Faixa Etária</th><th>SulAmérica Direto</th><th>SulAmérica Especial</th><th>SulAmérica Executivo</th></tr></thead>
+            <tbody>
+              <tr><td>0 a 18 anos</td><td>R$ 170 – R$ 270</td><td>R$ 310 – R$ 470</td><td>R$ 490 – R$ 760</td></tr>
+              <tr><td>19 a 28 anos</td><td>R$ 185 – R$ 295</td><td>R$ 330 – R$ 500</td><td>R$ 520 – R$ 810</td></tr>
+              <tr><td>29 a 38 anos</td><td>R$ 250 – R$ 400</td><td>R$ 450 – R$ 680</td><td>R$ 700 – R$ 1.090</td></tr>
+              <tr><td>39 a 48 anos</td><td>R$ 380 – R$ 600</td><td>R$ 670 – R$ 1.020</td><td>R$ 1.050 – R$ 1.640</td></tr>
+              <tr><td>49 a 58 anos</td><td>R$ 680 – R$ 1.080</td><td>R$ 1.200 – R$ 1.820</td><td>R$ 1.880 – R$ 2.940</td></tr>
+              <tr><td>59 anos ou mais</td><td>R$ 1.100 – R$ 1.750</td><td>R$ 1.940 – R$ 2.950</td><td>R$ 3.040 – R$ 4.750</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="highlight-box" style="margin-top:20px;"><p>⚠️ Valores estimados para 2026. Solicite cotação personalizada com a Virtua.</p></div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2 class="cs-title">Vantagens e Desvantagens da SulAmérica</h2>
+        <div class="pros-cons">
+          <div class="pros"><h4>✅ Vantagens</h4><ul>
+            <li>SulAmérica Direto: plano individual com bom custo-benefício</li>
+            <li>App Saúde SulAmérica completo e moderno</li>
+            <li>Reembolso em planos premium com livre escolha</li>
+            <li>Programa Saúde em Dia (prevenção e bem-estar)</li>
+            <li>Cobertura nacional abrangente</li>
+            <li>Telemedicina 24h disponível</li>
+          </ul></div>
+          <div class="cons"><h4>⚠️ Pontos de Atenção</h4><ul>
+            <li>Planos individuais com custo elevado para 50+ anos</li>
+            <li>Rede credenciada menor em cidades do interior</li>
+            <li>Coparticipação nos planos básicos</li>
+          </ul></div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- Network -->
     <section class="section network-section">

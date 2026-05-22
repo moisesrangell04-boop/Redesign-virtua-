@@ -301,6 +301,48 @@
         ]
     }
     </script>
+
+    <style>
+    .content-section { padding: 72px 0; }
+    .content-section.alt { background: #f8fafc; }
+    .content-section .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .cs-title { font-size: clamp(22px, 2.5vw, 30px); font-weight: 800; color: #1e293b; margin: 0 0 12px; }
+    .cs-lead { font-size: 16px; color: #475569; line-height: 1.8; margin: 0 0 32px; }
+    .cs-body { font-size: 15px; color: #374151; line-height: 1.85; }
+    .cs-body p { margin: 0 0 18px; }
+    .cs-body strong { color: #1e293b; }
+    .coverage-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 16px; margin-top: 28px; }
+    .coverage-item { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px 22px; }
+    .coverage-item h4 { font-size: 14px; font-weight: 700; color: #1e293b; margin: 0 0 6px; }
+    .coverage-item p { font-size: 13px; color: #64748b; margin: 0; line-height: 1.6; }
+    .price-table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 14px; }
+    .price-table th { background: #1e40af; color: white; padding: 12px 16px; text-align: left; font-weight: 600; }
+    .price-table td { padding: 11px 16px; border-bottom: 1px solid #e2e8f0; color: #374151; }
+    .price-table tr:nth-child(even) td { background: #f8fafc; }
+    .price-table tr:hover td { background: #eff6ff; }
+    .steps-list { list-style: none; padding: 0; margin: 24px 0 0; counter-reset: steps; }
+    .steps-list li { counter-increment: steps; display: flex; gap: 18px; align-items: flex-start; margin-bottom: 20px; }
+    .steps-list li::before { content: counter(steps); min-width: 36px; height: 36px; border-radius: 50%; background: #1e40af; color: white; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .steps-list li div h4 { font-size: 15px; font-weight: 700; color: #1e293b; margin: 0 0 4px; }
+    .steps-list li div p { font-size: 14px; color: #475569; margin: 0; line-height: 1.6; }
+    .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 28px; }
+    .pros-cons > div { border-radius: 14px; padding: 24px 26px; }
+    .pros { background: #f0fdf4; border: 1px solid #bbf7d0; }
+    .cons { background: #fff7ed; border: 1px solid #fed7aa; }
+    .pros h4 { color: #15803d; font-size: 16px; font-weight: 700; margin: 0 0 14px; }
+    .cons h4 { color: #c2410c; font-size: 16px; font-weight: 700; margin: 0 0 14px; }
+    .pros ul, .cons ul { list-style: none; padding: 0; margin: 0; }
+    .pros li, .cons li { font-size: 14px; padding: 5px 0; padding-left: 22px; position: relative; color: #374151; line-height: 1.5; }
+    .pros li::before { content: "✓"; position: absolute; left: 0; color: #16a34a; font-weight: 700; }
+    .cons li::before { content: "✗"; position: absolute; left: 0; color: #ea580c; font-weight: 700; }
+    .carencia-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px; }
+    .carencia-table th { background: #0f172a; color: white; padding: 11px 16px; text-align: left; font-weight: 600; }
+    .carencia-table td { padding: 10px 16px; border-bottom: 1px solid #e2e8f0; }
+    .carencia-table tr:nth-child(even) td { background: #f8fafc; }
+    .highlight-box { background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 24px 0; }
+    .highlight-box p { margin: 0; font-size: 14px; color: #1e3a8a; line-height: 1.7; }
+    @media(max-width:768px){ .pros-cons { grid-template-columns:1fr; } .price-table { font-size:12px; } }
+    </style>
 </head>
 <body>
     <!-- Top Bar -->
@@ -483,6 +525,45 @@
             </div>
         </div>
     </section>
+
+    <section class="content-section alt">
+      <div class="container">
+        <h2 class="cs-title">Reembolso SulAmérica: Como Funciona e Como Solicitar</h2>
+        <p class="cs-lead">O <strong>reembolso SulAmérica</strong> permite que beneficiários dos planos com cobertura de livre escolha sejam atendidos fora da rede credenciada e recebam ressarcimento das despesas. Disponível nos planos <strong>SulAmérica Especial</strong>, <strong>SulAmérica Executivo</strong> e outros com essa modalidade.</p>
+        <div class="cs-body">
+          <p>O reembolso SulAmérica funciona com base na <strong>tabela de reembolso própria da operadora</strong>. O percentual de cobertura varia de <strong>50% a 100%</strong> do valor da tabela, dependendo do plano contratado. Planos premium como o SulAmérica Executivo oferecem reembolso mais generoso.</p>
+          <div class="highlight-box"><p>💡 Consulte sua apólice para verificar se seu plano SulAmérica tem cobertura de reembolso e qual é o percentual de ressarcimento.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2 class="cs-title">Como Solicitar Reembolso SulAmérica: Passo a Passo</h2>
+        <ul class="steps-list">
+          <li><div><h4>Realize o atendimento e solicite nota fiscal</h4><p>Peça nota fiscal ou recibo com dados do prestador (nome, CRM/CRO, CNPJ), procedimento realizado e valor cobrado.</p></div></li>
+          <li><div><h4>Acesse o app Saúde SulAmérica</h4><p>Disponível gratuitamente para iOS e Android. Acesse "Serviços" → "Solicitar Reembolso".</p></div></li>
+          <li><div><h4>Informe os dados do atendimento</h4><p>Tipo de atendimento, data, prestador, CNPJ/CPF do profissional, valor pago e dados bancários.</p></div></li>
+          <li><div><h4>Anexe a documentação</h4><p>Nota fiscal ou recibo original, comprovante de pagamento, receita/relatório médico e resultado de exames (se aplicável).</p></div></li>
+          <li><div><h4>Aguarde a análise</h4><p>A SulAmérica tem até <strong>30 dias úteis</strong> para analisar e efetuar o pagamento. Acompanhe pelo app.</p></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section alt">
+      <div class="container">
+        <h2 class="cs-title">Documentos Necessários para Reembolso SulAmérica</h2>
+        <div class="coverage-grid">
+          <div class="coverage-item"><h4>📄 Nota Fiscal ou Recibo</h4><p>Com nome do prestador, CRM/CNPJ, procedimento, data e valor. Necessário para todos os tipos de atendimento.</p></div>
+          <div class="coverage-item"><h4>💳 Comprovante de Pagamento</h4><p>Extrato bancário, comprovante de transferência ou recibo de pagamento confirmando o valor pago.</p></div>
+          <div class="coverage-item"><h4>📋 Relatório Médico</h4><p>Relatório ou receituário do profissional com CRM, diagnóstico (CID) e justificativa do procedimento.</p></div>
+          <div class="coverage-item"><h4>🔬 Resultados de Exames</h4><p>Para reembolso de exames diagnósticos, anexe o resultado completo junto à solicitação médica.</p></div>
+          <div class="coverage-item"><h4>🏥 Para Internações</h4><p>Resumo de alta hospitalar, notas fiscais do hospital e anestesista, e relatório cirúrgico quando aplicável.</p></div>
+          <div class="coverage-item"><h4>🆔 Dados Bancários</h4><p>Banco, agência, conta corrente e CPF do titular (deve ser o próprio beneficiário).</p></div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- Network -->
     <section class="section network-section">
